@@ -66,6 +66,16 @@
   }
 }
 
+.archive__item-citation {
+  margin-top: 0.5em;
+  font-size: $type-size-6;
+  color: var(--global-text-color);
+}
+
+.archive__item-attachments {
+  margin-top: 0.35em;
+}
+
 .archive__item-teaser {
   border-radius: $border-radius;
   overflow: hidden;

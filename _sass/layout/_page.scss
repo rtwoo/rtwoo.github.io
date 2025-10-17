@@ -107,6 +107,16 @@
   }
 }
 
+.page__citation {
+  margin-top: 1em;
+  font-size: $type-size-6;
+  color: var(--global-text-color);
+}
+
+.page__attachments {
+  margin-top: 0.5em;
+}
+
 .page__hero {
   position: relative;
   margin-bottom: 2em;

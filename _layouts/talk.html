@@ -36,7 +36,40 @@ layout: default
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
         {% endif %}
         {% if page.talk_type %}<p>{{page.talk_type}} at {{ page.venue }},  {{page.location}} {% endif %}
-
+        {% assign talk_buttons = '' %}
+        {% if page.paperurl %}
+          {% assign paper_href = page.paperurl %}
+          {% unless paper_href contains '://' %}
+            {% assign paper_href = paper_href | relative_url %}
+          {% endunless %}
+          {% if talk_buttons != '' %}
+            {% capture talk_buttons %}{{ talk_buttons }} {% endcapture %}
+          {% endif %}
+          {% capture talk_buttons %}{{ talk_buttons }}<a class="btn btn--small btn--attachment" href="{{ paper_href }}"{% if page.paperurl contains '://' %} target="_blank" rel="noopener"{% endif %}>Paper</a>{% endcapture %}
+        {% endif %}
+        {% if page.slidesurl %}
+          {% assign slides_href = page.slidesurl %}
+          {% unless slides_href contains '://' %}
+            {% assign slides_href = slides_href | relative_url %}
+          {% endunless %}
+          {% if talk_buttons != '' %}
+            {% capture talk_buttons %}{{ talk_buttons }} {% endcapture %}
+          {% endif %}
+          {% capture talk_buttons %}{{ talk_buttons }}<a class="btn btn--small btn--attachment" href="{{ slides_href }}"{% if page.slidesurl contains '://' %} target="_blank" rel="noopener"{% endif %}>Slides</a>{% endcapture %}
+        {% endif %}
+        {% if page.posterurl %}
+          {% assign poster_href = page.posterurl %}
+          {% unless poster_href contains '://' %}
+            {% assign poster_href = poster_href | relative_url %}
+          {% endunless %}
+          {% if talk_buttons != '' %}
+            {% capture talk_buttons %}{{ talk_buttons }} {% endcapture %}
+          {% endif %}
+          {% capture talk_buttons %}{{ talk_buttons }}<a class="btn btn--small btn--attachment" href="{{ poster_href }}"{% if page.posterurl contains '://' %} target="_blank" rel="noopener"{% endif %}>Poster</a>{% endcapture %}
+        {% endif %}
+        {% if talk_buttons != '' %}
+          <p class="page__attachments attachment-button-group">{{ talk_buttons | strip }}</p>
+        {% endif %}
         </header>
       {% endunless %}
 

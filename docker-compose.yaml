@@ -2,8 +2,19 @@ services:
   jekyll-site:
     image: jekyll-site
     build: .
+    # Bind mount the site so edits on the host are visible inside the container
     volumes: [ .:/usr/src/app ]
-    ports: [ 4000:4000 ]
+    # Expose Jekyll server and livereload ports
+    ports:
+      - 4000:4000
+      - 35729:35729
     user: 1000:1000
-    environment: [ JEKYLL_ENV=docker ]
-    command: jekyll serve -H 0.0.0.0 -w --config _config.yml,_config_docker.yml
+    environment:
+      - JEKYLL_ENV=docker
+      # On Windows, inotify doesn't work inside containers; enable polling so
+      # file changes on the host are detected. The `listen` gem (used by jekyll)
+      # respects FORCE_POLLING or LISTEN_FORCE_POLLING environment variables.
+      - LISTEN_FORCE_POLLING=1
+    # Use --livereload so the browser auto-refreshes and --force_polling to make
+    # file watching work reliably on Docker for Windows.
+    command: jekyll serve -H 0.0.0.0 -w --livereload --livereload-port 35729 --force_polling --config _config.yml,_config_docker.yml

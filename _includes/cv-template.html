@@ -105,7 +105,7 @@
       <li class="cv-item">
         <div class="cv-item-header">
           <div class="cv-item-title">{{ work.position }}</div>
-          <div class="cv-item-date">{{ work.startDate }}{% if work.endDate %} - {{ work.endDate }}{% endif %}</div>
+          <div class="cv-item-date">{% if work.startDate %}{{ work.startDate }}{% endif %}{% if work.endDate %}{% if work.startDate %} – {% endif %}{{ work.endDate }}{% endif %}</div>
         </div>
         <div class="cv-item-content">
           <div class="cv-item-subtitle">{{ work.company }}</div>
@@ -115,6 +115,36 @@
           {% if work.highlights.size > 0 %}
           <ul class="cv-highlights">
             {% for highlight in work.highlights %}
+            <li>{{ highlight }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  
+  {% if cv.volunteer and cv.volunteer.size > 0 %}
+  <!-- Service and Leadership -->
+  <div class="cv-section">
+    <h2>Service &amp; Leadership</h2>
+    <ul class="cv-list">
+      {% for volunteer in cv.volunteer %}
+      <li class="cv-item">
+        <div class="cv-item-header">
+          <div class="cv-item-title">{{ volunteer.position }}</div>
+          <div class="cv-item-date">{% if volunteer.startDate %}{{ volunteer.startDate }}{% endif %}{% if volunteer.endDate %}{% if volunteer.startDate %} – {% endif %}{{ volunteer.endDate }}{% endif %}</div>
+        </div>
+        <div class="cv-item-content">
+          <div class="cv-item-subtitle">{{ volunteer.organization }}</div>
+          {% if volunteer.summary %}
+          <div class="cv-item-detail">{{ volunteer.summary }}</div>
+          {% endif %}
+          {% if volunteer.highlights and volunteer.highlights.size > 0 %}
+          <ul class="cv-highlights">
+            {% for highlight in volunteer.highlights %}
             <li>{{ highlight }}</li>
             {% endfor %}
           </ul>
@@ -142,6 +172,29 @@
       </div>
       {% endfor %}
     </div>
+  </div>
+  {% endif %}
+  
+  {% if cv.awards and cv.awards.size > 0 %}
+  <!-- Awards -->
+  <div class="cv-section">
+    <h2>Awards &amp; Honors</h2>
+    <ul class="cv-list">
+      {% for award in cv.awards %}
+      <li class="cv-item">
+        <div class="cv-item-header">
+          <div class="cv-item-title">{{ award.title }}</div>
+          <div class="cv-item-date">{{ award.date }}</div>
+        </div>
+        <div class="cv-item-content">
+          <div class="cv-item-subtitle">{{ award.awarder }}</div>
+          {% if award.summary %}
+          <div class="cv-item-detail">{{ award.summary }}</div>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
   {% endif %}
   

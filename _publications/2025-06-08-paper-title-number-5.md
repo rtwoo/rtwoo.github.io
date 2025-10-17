@@ -1,13 +1,12 @@
 ---
-title: "Paper Title Number 5, with math $$E=mc^2$$"
+title: "OpenMRT: Outdoor Thermal Exposure and Comfort Modeling using Street View Imagery"
 collection: publications
-category: conferences
-permalink: /publication/2024-02-17-paper-title-number-4
-excerpt: 'This paper is about a famous math equation, $$E=mc^2$$'
-date: 2024-02-17
-venue: 'GitHub Journal of Bugs'
-paperurl: 'http://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2024). &quot;Paper Title Number 3.&quot; <i>GitHub Journal of Bugs</i>. 1(3).'
+category: manuscripts
+permalink: /publication/woo-openmrt-2025
+excerpt: 'Manuscript in preparation for the 25th Conference on Artificial Intelligence for Environmental Science (2025).'
+date: 2025-05-15
+venue: 'Manuscript in preparation'
+paperurl: ''
+citation: 'Middel, A., Shaeri, P., Woo, R. T., & Krayenhoff, S. (2025). "OpenMRT: Outdoor Thermal Exposure and Comfort Modeling using Street View Imagery." Manuscript in preparation.'
 ---
-
-Using [MathJax](https://www.mathjax.org/) in the description is supported - $$E=mc^2$$ - however, the use must be mindful that the default delimiters are `$$...$$` and `\\[...\\]` which differs from the `$...$` that is typically expected.
+OpenMRT combines street-level imagery, grey-box/semi-empirical modeling, and human comfort metrics to estimate outdoor thermal exposure for planners and community stakeholders.

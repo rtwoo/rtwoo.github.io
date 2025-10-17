@@ -1,152 +1,310 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
+    "name": "Ryan T. Woo",
+    "label": "Incoming PhD Student in Computer Science",
+    "email": "rtwoo@asu.edu",
     "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "website": "https://rtwoo.github.io",
+    "summary": "Incoming Computer Science PhD student at Arizona State University researching intelligent tutoring and adaptive learning systems, knowledge representation, human-computer interaction, and immersive educational technology.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Earth",
+      "city": "Tempe",
       "countryCode": "US",
-      "region": ""
+      "region": "AZ"
     },
     "profiles": [
       {
-        "network": "Google Scholar",
-        "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-      },
-      {
-        "network": "ORCID",
-        "username": "",
-        "url": "http://orcid.org/yourorcidurl"
-      },
-      {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "rtwoo",
+        "url": "https://github.com/rtwoo"
       }
     ]
   },
-  "work": [],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
+      "institution": "Arizona State University – School of Computing and Augmented Intelligence",
+      "area": "Ph.D. in Computer Science",
       "studyType": "",
       "startDate": "",
-      "endDate": "2018",
+      "endDate": "Anticipated Start Spring 2025",
       "gpa": null,
-      "courses": []
+      "courses": [
+        "Committee Co-chairs: Ricardo Eiris (SSEBE) and Chris Bryan (SCAI)"
+      ]
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
+      "institution": "Arizona State University – SCAI & School of Mathematical and Statistical Sciences",
+      "area": "B.S. in Computer Science with a Minor in Mathematics",
       "studyType": "",
       "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
-      "gpa": null,
-      "courses": []
+      "endDate": "Expected Fall 2025",
+      "gpa": 3.75,
+      "courses": [
+        "School of Computing and Augmented Intelligence",
+        "School of Mathematical and Statistical Sciences"
+      ]
     }
   ],
-  "skills": [],
-  "languages": [],
-  "interests": [],
-  "references": [],
+  "work": [
+    {
+      "company": "Arizona State University – Construction Workforce and Technology (CWT) Lab",
+      "position": "Research Assistant",
+      "startDate": "2025-05",
+      "endDate": "Present",
+      "summary": "Develop learning analytics and immersive training tools that model learner engagement across NSF-funded projects.",
+      "highlights": [
+        "HCC: NSF Grant 2436881 – Modeling Learning Engagement Using AI and Gaze Data to Improve VR Immersive Training",
+        "CUE-T: NSF Grant 2434429 – Addressing Hidden Curricula within Computer Science Education",
+        "iVisit: NSF Grant 2336507 – Situated Learning Experiences through Web-based Virtual Field Trips"
+      ]
+    },
+    {
+      "company": "Arizona State University – IoT and Robotics Education Lab",
+      "position": "Project Management Assistant & Research Software Engineer",
+      "startDate": "2024-08",
+      "endDate": "Present",
+      "summary": "Lead development of AI-enabled educational platforms and coordinate multi-investigator collaborations.",
+      "highlights": [
+        "Jupyter Textbooks – Extending JupyterLab into an edge-powered interactive textbook platform",
+        "RASQAL – Retrieval augmented schema-based question generation for adaptive learning",
+        "SAGE – Student Assistant for Guided Explanations (formerly ASU Instructor Assistant GPT)"
+      ]
+    },
+    {
+      "company": "Arizona State University – Sensable Heatscapes and Digital Environments (SHaDE) Lab",
+      "position": "Undergraduate Researcher (NSF REU)",
+      "startDate": "2023-01",
+      "endDate": "Present",
+      "summary": "Investigate human thermal exposure and heat resilience using computer vision, visualization, and urban analytics.",
+      "highlights": [
+        "OpenMRT: NSF Grant CMMI-1942805 – Human Thermal Exposure in Cities through novel sensing and modeling"
+      ]
+    },
+    {
+      "company": "Waybright Technology Academy",
+      "position": "Assistant Software Developer",
+      "startDate": "2022-11",
+      "endDate": "2024-01",
+      "summary": "Delivered teaching and learning infrastructure for a private K–12 institution.",
+      "highlights": [
+        "Migrated the school to Canvas LMS with SSO integration and end-to-end course content transition",
+        "Initiated a Python, Django, and PostgreSQL student information system for records, enrollment, and transcripts"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Association for Computing Machinery (ACM) Student Chapter at ASU",
+      "position": "Chapter Director",
+      "startDate": "2025-01",
+      "endDate": "Present",
+      "summary": "",
+      "highlights": [
+        "Organized the chapter’s first student research symposium"
+      ]
+    },
+    {
+      "organization": "SCAI Desert CodeSprouts Workshop for Middle School Children",
+      "position": "Programming Module Lead",
+      "startDate": "2025-01",
+      "endDate": "2025-12",
+      "summary": "",
+      "highlights": [
+        "Designed and delivered hands-on programming curriculum for middle school learners"
+      ]
+    },
+    {
+      "organization": "Engineering Projects in Community Service (EPICS) – Jupyter Textbooks",
+      "position": "Project Sponsor & Product Manager",
+      "startDate": "2024-08",
+      "endDate": "Present",
+      "summary": "",
+      "highlights": [
+        "Guided multidisciplinary teams extending edge-powered interactive textbook experiences"
+      ]
+    },
+    {
+      "organization": "Arizona State University Student Organizations & Outreach",
+      "position": "Mentor, Judge, and Student Leader",
+      "startDate": "2022-01",
+      "endDate": "Present",
+      "summary": "",
+      "highlights": [
+        "Judge for EPICS High (2024, 2025) and sunhacks 2024 hackathon",
+        "President & Director of Technology, Software Developers Association (SoDA) at ASU – organized InnovationHacks and Code Challenge events",
+        "Project Manager, EPICS Attendance Management System (Spring 2023–Fall 2024)",
+        "Curriculum Developer, 2Unify Education EPICS project",
+        "Technology Officer, SoDA at ASU (Fall 2022–Spring 2023)"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Outstanding Undergraduate Student Poster",
+      "date": "2025",
+      "awarder": "Central Arizona-Phoenix Long Term Ecological Research (CAP LTER) ASM Poster Symposium",
+      "summary": "Recognized for research on learning engagement and immersive training."
+    },
+    {
+      "title": "Certificate of Excellence: Outstanding Innovation",
+      "date": "2024",
+      "awarder": "Undergraduate Teaching Assistant Program, Arizona State University",
+      "summary": "Honored for innovative contributions to student learning support."
+    },
+    {
+      "title": "Generator Award: Outstanding Team Leader",
+      "date": "2024",
+      "awarder": "Engineering Projects in Community Service (EPICS)",
+      "summary": "Recognized for leadership on community-focused engineering projects."
+    },
+    {
+      "title": "SUN Award",
+      "date": "2024",
+      "awarder": "School of Computing and Augmented Intelligence, ASU",
+      "summary": "For demonstrating leadership, innovation, and student success."
+    },
+    {
+      "title": "Most Creative Use of GitHub",
+      "date": "2023",
+      "awarder": "sunhacks",
+      "summary": "Awarded for creative engineering at the sunhacks hackathon."
+    },
+    {
+      "title": "Devils Invent – 2nd Place",
+      "date": "2023",
+      "awarder": "Arizona State University",
+      "summary": "Recognized for the Attendance Management System prototype, later continued through EPICS."
+    },
+    {
+      "title": "New American University Scholar (President’s Award)",
+      "date": "2021",
+      "awarder": "Arizona State University",
+      "summary": "Merit-based scholarship for academic excellence."
+    },
+    {
+      "title": "Dean’s List",
+      "date": "2018-2025",
+      "awarder": "Arizona State University",
+      "summary": "Multiple semesters of academic honors."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Research Interests",
+      "level": "",
+      "keywords": [
+        "Intelligent tutoring systems",
+        "Adaptive learning",
+        "Knowledge representation",
+        "Human-computer interaction",
+        "Data visualization",
+        "Computer graphics",
+        "Applied computer vision",
+        "Natural language processing",
+        "Cognitive science"
+      ]
+    }
+  ],
   "publications": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "http://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
+      "name": "Explainable Human-in-the-Loop Segmentation via Critic Feedback Signals",
+      "publisher": "Submitted to IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) 2026",
+      "releaseDate": "2025-08",
+      "website": "",
+      "summary": "P. Shaeri, R. T. Woo, Y. Mohammadpour, A. Middel"
     },
     {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "http://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
+      "name": "Tri-Accel: Curvature-Aware Precision-Adaptive and Memory-Elastic Optimization for Efficient GPU Usage",
+      "publisher": "arXiv:2508.16905; submitted to ScaleOPT Workshop at NeurIPS 2025",
+      "releaseDate": "2025-08",
+      "website": "https://arxiv.org/abs/2508.16905",
+      "summary": "M. Sheibanian, P. Shaeri, A. Beigi, R. T. Woo, A. Keluskar"
     },
     {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "http://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "http://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
+      "name": "OpenMRT: Outdoor Thermal Exposure and Comfort Modeling using Street View Imagery",
+      "publisher": "Manuscript in preparation for the 25th Conference on Artificial Intelligence for Environmental Science (2025)",
+      "releaseDate": "2025-05",
+      "website": "",
+      "summary": "A. Middel, P. Shaeri, R. T. Woo, S. Krayenhoff"
     }
   ],
   "presentations": [
     {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
-      "description": ""
+      "name": "Using Facial Emotion Recognition to Improve Understanding of Learning Processes",
+      "event": "ASU Summer Research Initiative Symposium",
+      "date": "2025-07",
+      "location": "Tempe, AZ, USA",
+      "description": "Presented adaptive learning analytics leveraging emotion recognition."
     },
     {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
-      "description": ""
+      "name": "OpenMRT: Image-Based Human Thermal Exposure Model for Ground-Level Simulation",
+      "event": "Urban Climate Research Center Symposium; CAP LTER ASM Symposium",
+      "date": "2025-04",
+      "location": "Tempe, AZ, USA",
+      "description": "Demonstrated thermal exposure modeling workflows for urban planning."
     },
     {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
-      "description": ""
-    },
-    {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
-      "description": ""
+      "name": "ASU Instructor Assistant GPT (SAGE)",
+      "event": "Co-Making the Future: China-U.S. Young Makers Competition",
+      "date": "2024-07",
+      "location": "",
+      "description": "Showcased AI-powered guided explanation tooling for instructors."
     }
   ],
   "teaching": [
     {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
-      "description": ""
+      "course": "ASU SCAI CSE 445: Distributed Software Development",
+      "institution": "Arizona State University",
+      "date": "Fall 2024 – Present",
+      "role": "Instructional Assistant; Undergraduate Teaching Assistant; Grader",
+      "description": "Support project-based learning across distributed teams and mentor student Scrum masters."
     },
     {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
-      "description": ""
+      "course": "ASU SCAI Robotics Camp for Middle and High School",
+      "institution": "Arizona State University",
+      "date": "Summer 2025",
+      "role": "Camp Instructor",
+      "description": "Delivered robotics programming modules alongside Dr. Yinong Chen."
+    },
+    {
+      "course": "ASU SCAI CSE 310: Data Structures and Algorithms",
+      "institution": "Arizona State University",
+      "date": "Spring 2024",
+      "role": "Course Support Staff",
+      "description": "Facilitated recitations and provided technical mentorship on advanced data structures."
+    },
+    {
+      "course": "Waybright Technology Academy: Intro to Audio Engineering",
+      "institution": "Waybright Technology Academy",
+      "date": "Fall 2024",
+      "role": "Course Instructor",
+      "description": "Designed and delivered project-based curriculum on digital audio production for high school students."
+    },
+    {
+      "course": "ASU SCAI CSE 240: Introduction to Programming Languages",
+      "institution": "Arizona State University",
+      "date": "Fall 2023",
+      "role": "Undergraduate Teaching Assistant",
+      "description": "Led lab sections and provided assessment support across language paradigms."
+    },
+    {
+      "course": "ASU SCAI CSE 205: Object-Oriented Programming and Data Structures",
+      "institution": "Arizona State University",
+      "date": "Spring 2023 – Spring 2024",
+      "role": "Course Development Assistant; Grading Coordinator; Grader",
+      "description": "Developed instructional materials and coordinated grading infrastructure for multi-section courses."
+    },
+    {
+      "course": "ASU SCAI CSE 110: Principles of Programming (Barrett Honors)",
+      "institution": "Arizona State University",
+      "date": "Fall 2022",
+      "role": "Undergraduate Teaching Assistant",
+      "description": "Facilitated honors lab sections emphasizing computational problem solving."
     }
   ],
-  "portfolio": [
-    {
-      "name": "Portfolio item number 1",
-      "category": "portfolio",
-      "date": "",
-      "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
-    }
-  ]
+  "languages": [],
+  "interests": [],
+  "references": [],
+  "portfolio": []
 }

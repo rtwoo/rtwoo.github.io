@@ -126,6 +126,19 @@ body:hover .visually-hidden button {
   word-wrap: break-word;      /* IE */
 }
 
+/* attachment button tray */
+
+.attachment-button-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  align-items: center;
+
+  .btn {
+    margin-bottom: 0;
+  }
+}
+
 /*
    Images
    ========================================================================== */

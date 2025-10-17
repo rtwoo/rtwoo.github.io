@@ -58,6 +58,23 @@
     }
   }
 
+  &--attachment {
+    background-color: var(--global-link-color);
+    border: 1px solid transparent !important;
+    color: #fff !important;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover,
+    &:focus {
+      background-color: var(--global-link-color-hover);
+      color: #fff !important;
+    }
+
+    &:visited {
+      color: #fff !important;
+    }
+  }
+
   /* light outline */
 
   &--light-outline {

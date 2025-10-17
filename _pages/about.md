@@ -1,56 +1,44 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "`./rtwoo` -- Ryan T. Woo"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+I'm an incoming computer science PhD student at Arizona State University working at the intersection of educational technology, human-computer interaction, and applied machine learning. I build and study how human-in-the-loop adaptive learning and tutoring systems, inspectable knowledge representations, and collaboration tools can help diverse learners and educators succeed across K-12, higher education, and workforce training contexts.
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+Currently, I split my time between the [Construction Workforce and Technology (CWT) Lab](https://www.cwt-lab.com/) led by Dr. Ricardo Eiris in the School of Sustainable Engineering and the Built Environment and the [Sonoran Visualization Lab (SVL)](https://chrisbryan.github.io/) led by Dr. Chris Bryan in the School of Computing and Augmented Intelligence.
+<!-- Across these collaborations I develop tools that capture engagement signals (emotion, gaze, physiological data) and transform them into actionable learning insights for instructors and students alike. -->
 
-A data-driven personal website
+Research Highlights
 ======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+* Modeling learning processes in immersive training environments through [NSF Collaborative Research Award 2336507](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2336507&HistoricalAwards=false).
+* Investigating gaps in knowledge, skills, and dispositions of students studying computing disciplines through [NSF Collaborative Research CUE-T Award 2434430](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2434430&HistoricalAwards=false).
+* Designing retrieval-augmented question generation pipelines (RASQAL) and AI teaching assistants (SAGE) that support faculty at scale with Teaching Professor [Dr. Yinong Chen](https://search.asu.edu/profile/328180).
+* During my undergrad: Co-developed OpenMRT with [Pouya Shaeri](https://pouyashaeri.github.io/), an NSF CAREER project advancing human thermal exposure modeling with street-level imagery under [Dr. Ariane Middel and the SHaDE Lab](https://shadelab.asu.edu/).
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your Markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the Markdown files! You can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
-
-For those users that need more advanced functionality, the template also supports the following popular tools:
-- [MathJax](https://www.mathjax.org/) for mathematical equations
-- [Mermaid](https://mermaid.js.org/) for diagraming
-- [Plotly](https://plotly.com/javascript/) for plotting
-
-Getting started
+<!-- Current Projects
 ======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+* **Jupyter Textbooks** — Extending JupyterLab into an edge-powered interactive textbook platform for active learning.
+* **Immersive Training Analytics** — Integrating gaze, posture, and affective signals to deliver richer feedback in virtual reality.
+* **Adaptive Curriculum Tools** — Building schema-aware question generators and guided explanation systems that personalize feedback. -->
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+Teaching & Outreach
+======
+I’ve supported courses ranging from introductory programming (CSE 110) to upper-division distributed software development (CSE 445), and supervise/mentor student design teams through the [Engineering Projects in Community Service (EPICS)](https://epics.engineering.asu.edu/) program and year-long [CS Capstone](https://sites.google.com/asu.edu/cidse-capstone/home) course.
+As an organizer with the [Software Developers Association (./SoDA) at ASU](https://thesoda.io/), I have led planning of local hackathons, workshops, and coding contests and contribute to STEM outreach initiatives like the SCAI [Robotics Camp](https://venus.sod.asu.edu/roboticscamp/) and [Desert CodeSprouts](https://scai.engineering.asu.edu/desert-codesprouts-workshop/).
 
-Create content & metadata
-------
-For site content, there is one Markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a Markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each Markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+Awards & Recognition
+======
+* Outstanding Undergraduate Student Poster -- OpenMRT, Central Arizona-Phoenix Long-Term Ecological Research ASM Poster Symposium (2025)
+* Certificate of Excellence: Outstanding Innovation, Undergraduate Teaching Assistant Program (2024)
+* Generator Award: Outstanding Team Leader, Engineering Projects in Community Service (2024)
+* SUN Award for leadership and innovation, School of Computing and Augmented Intelligence (2024)
+* Most Creative Use of GitHub, sunhacks (2023)
+* Devils Invent, 2nd Place -- Attendance Management System (2023)
 
-**Markdown generator**
-
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual Markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the Markdown files, then commit and push them to the GitHub repository.
-
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and Markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
-
-Example: editing a Markdown file for a talk
-![Editing a Markdown file for a talk](/images/editing-talk.png)
-
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+Let’s Collaborate
+======
+Whether you’re interested in using state-of-the-art computing techniques to advance education, or community-focused STEM outreach projects, feel free to reach out at [rtwoo@asu.edu](mailto:rtwoo@asu.edu).
