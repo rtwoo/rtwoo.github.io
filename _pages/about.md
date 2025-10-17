@@ -39,6 +39,6 @@ Awards & Recognition
 * Most Creative Use of GitHub, sunhacks (2023)
 * Devils Invent, 2nd Place -- Attendance Management System (2023)
 
-Let’s Collaborate
+Interested in Collaborating?
 ======
-Whether you’re interested in using state-of-the-art computing techniques to advance education, or community-focused STEM outreach projects, feel free to reach out at [rtwoo@asu.edu](mailto:rtwoo@asu.edu).
+If you're into using state-of-the-art computing techniques to advance education, or community-focused STEM outreach projects, feel free to reach out to `rtwoo` on Discord or [rtwoo@asu.edu](mailto:rtwoo@asu.edu).

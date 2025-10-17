@@ -11,11 +11,11 @@ redirect_from:
 
 Education
 ======
-* **Arizona State University – School of Computing and Augmented Intelligence**  
+* **Arizona State University – School of Computing and Augmented Intelligence (SCAI)**  
   *Ph.D. in Computer Science, anticipated start Spring 2025*  
   Committee Co-chairs: Assistant Professor Ricardo Eiris (SSEBE) and Assistant Professor Chris Bryan (SCAI)
 * **Arizona State University – SCAI & School of Mathematical and Statistical Sciences**  
-  *B.S. in Computer Science with a Minor in Mathematics, expected Fall 2025*  
+  *B.S. in Computer Science and Mathematics, 2025*  
   GPA: 3.75
 
 Research Interests
@@ -81,7 +81,6 @@ Teaching & Course Support
 
 Service & Leadership
 ======
-* Chapter Director, Association for Computing Machinery (ACM) Student Chapter at ASU (Spring 2025–Present); organized the chapter’s first student research symposium
 * Programming Module Lead, SCAI Desert CodeSprouts Workshop for Middle School Children (2025)
 * Project Sponsor & Product Manager, Jupyter Textbooks — Engineering Projects in Community Service (EPICS) (Fall 2024–Present)
 * Judge, EPICS High (2024, 2025) and sunhacks (2024)
