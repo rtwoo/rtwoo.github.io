@@ -11,11 +11,11 @@ redirect_from:
 
 Education
 ======
-* **Arizona State University – School of Computing and Augmented Intelligence (SCAI)**  
-  *Ph.D. in Computer Science, anticipated start Spring 2025*  
+* **Ph.D. in Computer Science, anticipated start Spring 2025**
+* *Arizona State University – School of Computing and Augmented Intelligence (SCAI)*
   Committee Co-chairs: Assistant Professor Ricardo Eiris (SSEBE) and Assistant Professor Chris Bryan (SCAI)
-* **Arizona State University – SCAI & School of Mathematical and Statistical Sciences**  
-  *B.S. in Computer Science and Mathematics, 2021-2025*  
+* **B.S. in Computer Science and Mathematics**
+* *Arizona State University – SCAI & School of Mathematical and Statistical Sciences, 2021-2025*
   GPA: 3.75
 
 Research Interests
