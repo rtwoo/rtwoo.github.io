@@ -9,8 +9,8 @@ location: "Tempe, AZ, USA"
 date: 2025-07-15
 venue: "ASU Summer Research Initiative Symposium"
 presentation_type: "Symposium Presentation"
-slidesurl: /files/presentations/asu-sri-emotion-recognition-slides.pdf
-posterurl: /files/presentations/asu-sri-emotion-recognition-poster.pdf
+# slidesurl: /files/presentations/asu-sri-emotion-recognition-slides.pdf
+# posterurl: /files/presentations/asu-sri-emotion-recognition-poster.pdf
 ---
 
-I presented our progress on modeling learner engagement signals captured from emotion recognition pipelines to guide adaptive feedback loops for immersive training environments.
+<!-- I presented our progress on modeling learner engagement signals captured from emotion recognition pipelines to guide adaptive feedback loops for immersive training environments. -->
