@@ -15,7 +15,7 @@ Education
   *Ph.D. in Computer Science, anticipated start Spring 2025*  
   Committee Co-chairs: Assistant Professor Ricardo Eiris (SSEBE) and Assistant Professor Chris Bryan (SCAI)
 * **Arizona State University – SCAI & School of Mathematical and Statistical Sciences**  
-  *B.S. in Computer Science and Mathematics, 2025*  
+  *B.S. in Computer Science and Mathematics, 2021-2025*  
   GPA: 3.75
 
 Research Interests
@@ -71,7 +71,7 @@ Selected Presentations
 
 Teaching & Course Support
 ======
-* **ASU SCAI CSE 445: Distributed Software Development** — Instructional Assistant (Fall 2025–Present); Undergraduate Teaching Assistant (Spring 2025–Summer 2025); Grader (Fall 2024)
+* **ASU CSE 445: Distributed Software Development** — Instructional Assistant (Fall 2025–Present); Undergraduate Teaching Assistant (Spring 2025–Summer 2025); Grader (Fall 2024)
 * **ASU SCAI Robotics Camp for Middle and High School** — Camp Instructor assisting Dr. Yinong Chen (Summer 2025)
 * **ASU SCAI CSE 310: Data Structures and Algorithms** — Course Support Staff (Spring 2024)
 * **Waybright Technology Academy: Intro to Audio Engineering** — Course Instructor (Fall 2024)
