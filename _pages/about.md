@@ -14,8 +14,8 @@ Currently, I split my time between the [Construction Workforce and Technology (C
 
 Research Highlights
 ======
-* Modeling learning processes in immersive training environments through [NSF Collaborative Research Award 2336507](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2336507&HistoricalAwards=false).
-* Investigating gaps in knowledge, skills, and dispositions of students studying computing disciplines through [NSF Collaborative Research CUE-T Award 2434430](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2434430&HistoricalAwards=false).
+* Investigating gaps in knowledge, skills, and dispositions of students studying computing disciplines through the [Hidden Curricula-Addressing Unseen Challenges within Computer Science Education](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2434430&HistoricalAwards=false) project.
+* Modeling learning processes in immersive training environments through the NSF-funded [iVisit: Situated Learning Experiences through Web-based Virtual Field Trips](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2336507&HistoricalAwards=false) project.
 * Designing retrieval-augmented question generation pipelines (RASQAL) and AI teaching assistants (SAGE) that support faculty at scale with Teaching Professor [Dr. Yinong Chen](https://search.asu.edu/profile/328180).
 * During my undergrad: Co-developed OpenMRT with [Pouya Shaeri](https://pouyashaeri.github.io/), an NSF CAREER project advancing human thermal exposure modeling with street-level imagery under [Dr. Ariane Middel and the SHaDE Lab](https://shadelab.asu.edu/).
 

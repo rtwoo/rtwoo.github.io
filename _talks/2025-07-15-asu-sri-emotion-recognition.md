@@ -9,6 +9,7 @@ location: "Tempe, AZ, USA"
 date: 2025-07-15
 venue: "ASU Summer Research Initiative Symposium"
 presentation_type: "Symposium Presentation"
+citation: 'Woo, R. T., & Eiris, R. (2025). "Using Facial Emotion Recognition to Improve Understanding of Learning Processes"'
 # slidesurl: /files/presentations/asu-sri-emotion-recognition-slides.pdf
 # posterurl: /files/presentations/asu-sri-emotion-recognition-poster.pdf
 ---
