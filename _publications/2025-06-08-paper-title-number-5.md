@@ -4,7 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/woo-openmrt-2025
 excerpt: 'Manuscript in preparation.'
-date: 2025-05-15
+date: 2026-05-01
 # venue: 'Manuscript in preparation'
 # paperurl: ''
 citation: 'Middel, A., Shaeri, P., Woo, R. T., & Krayenhoff, S. (2025). "OpenMRT: Outdoor Thermal Exposure and Comfort Modeling using Street View Imagery." Manuscript in preparation.'
