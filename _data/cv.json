@@ -1,11 +1,11 @@
 {
   "basics": {
     "name": "Ryan T. Woo",
-    "label": "Incoming PhD Student in Computer Science",
+    "label": "PhD Student in Computer Science",
     "email": "rtwoo@asu.edu",
     "phone": "",
     "website": "https://rtwoo.github.io",
-    "summary": "Incoming Computer Science PhD student at Arizona State University researching intelligent tutoring and adaptive learning systems, knowledge representation, human-computer interaction, and immersive educational technology.",
+    "summary": "Computer Science PhD student at Arizona State University researching intelligent tutoring and adaptive learning systems, knowledge representation, human-computer interaction, and immersive educational technology.",
     "location": {
       "address": "",
       "postalCode": "",
