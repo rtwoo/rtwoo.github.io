@@ -1,0 +1,5 @@
+# Set MATLAB files to display inline in browser instead of downloading
+<FilesMatch "\.m$">
+    Header set Content-Disposition "inline"
+    AddType text/plain .m
+</FilesMatch>
