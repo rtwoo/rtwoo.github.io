@@ -8,6 +8,6 @@ date: 2025-08-01
 venue: 'arXiv preprint; Submitted to WACV 2026.'
 # slidesurl: ''
 paperurl: 'https://arxiv.org/abs/2510.09945'
-citation: 'Pouya Shaeri, Ryan T Woo, Yasaman Mohammadpour, Ariane Middel. 2025. Explainable Human-in-the-Loop Segmentation via Critic Feedback Signals. Submitted to WACV 2026. arXiv:2510.09945.'
+citation: 'Pouya Shaeri, Ryan T. Woo, Yasaman Mohammadpour, Ariane Middel. 2025. Explainable Human-in-the-Loop Segmentation via Critic Feedback Signals. Submitted to WACV 2026. arXiv:2510.09945.'
 ---
 We introduce a critic-in-the-loop segmentation framework that incorporates human feedback signals to adapt intermediate representations and improve explainability in immersive training environments.
