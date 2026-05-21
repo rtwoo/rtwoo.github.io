@@ -7,9 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-I'm a research associate and computer science PhD student at Arizona State University working at the intersection of educational technology, human-computer interaction, and applied machine learning. He builds and studies how human-in-the-loop adaptive learning and tutoring systems, collaboration tools, information visualizations, and other forms of technology-enhanced learning can help diverse learners and educators succeed across formal education and workforce training contexts.
+I work at the intersection of educational technology, human-computer interaction, and applied machine learning. I build and study how human-in-the-loop adaptive learning and tutoring systems, collaboration tools, information visualizations, and other forms of technology-enhanced learning can help diverse learners and educators succeed across formal education and workforce training contexts.
 
-Currently, I split my time between the [Construction Workforce and Technology (CWT) Lab](https://www.cwt-lab.com/) led by Dr. Ricardo Eiris in the School of Sustainable Engineering and the Built Environment and the [Sonoran Visualization Lab (SVL)](https://chrisbryan.github.io/) led by Dr. Chris Bryan in the School of Computing and Augmented Intelligence.
+Currently, I split my time between the [Construction Workforce and Technology (CWT) Lab](https://www.cwt-lab.com/) led by Dr. Ricardo Eiris in the School of Sustainable Engineering and the Built Environment and the [Sonoran Visualization Lab (SVL)](https://chrisbryan.github.io/) led by Dr. Chris Bryan in the School of Computing and Augmented Intelligence at Arizona State University.
 <!-- Across these collaborations I develop tools that capture engagement signals (emotion, gaze, physiological data) and transform them into actionable learning insights for instructors and students alike. -->
 
 Research Highlights
