@@ -140,7 +140,7 @@ layout: default
       if (footer && footer.classList.contains('fixed-bottom')) {
         footerOffset = footer.offsetHeight || 0;
       }
-      cue.style.setProperty('--about-scroll-cue-footer-offset', footerOffset + 'px');
+      cue.style.bottom = (18 + footerOffset) + 'px';
 
       var targetRect = targetHeading.getBoundingClientRect();
       var targetReached = targetRect.top <= getNavOffset() + 8;

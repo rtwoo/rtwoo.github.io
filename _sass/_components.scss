@@ -263,11 +263,9 @@ ul.task-list input[type="checkbox"] {
 }
 
 .about-scroll-cue {
-  --about-scroll-cue-footer-offset: 0px;
-
   position: fixed;
   left: 50%;
-  bottom: calc(1.1rem + var(--about-scroll-cue-footer-offset));
+  bottom: 18px;
   transform: translateX(-50%);
   z-index: 1050;
   display: inline-flex;
