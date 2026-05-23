@@ -68,7 +68,7 @@ latest_posts:
 
 <div class="content-section-card content-section-card--bio" markdown="1">
 
-I work at the intersection of educational technology, human-computer interaction, and applied machine learning. I build and study how adaptive learning, personalized tutoring systems, interactive learning envioronments, collaboration tools, information visualization, immersive training, and other forms of technology-enhanced learning can help diverse learners and educators succeed across formal education and workforce training contexts.
+I work at the intersection of educational technology, human-computer interaction, and applied machine learning. I build and study how adaptive learning, personalized tutoring systems, interactive learning environments, collaboration tools, information visualization, immersive training, and other forms of technology-enhanced learning can help diverse learners and educators succeed across formal education and workforce training contexts.
 
 Currently, I split my time between the [Sonoran Visualization Lab (SVL)](https://chrisbryan.github.io/) led by Dr. Chris Bryan in the School of Computing and Augmented Intelligence and the [Construction Workforce and Technology (CWT) Lab](https://www.cwt-lab.com/) led by Dr. Ricardo Eiris in the School of Sustainable Engineering and the Built Environment at ASU.
 
