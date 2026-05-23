@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Research Associate and PhD Student in Computer Science at Arizona State University (ASU)
+subtitle: Research Associate and PhD Student in Computer Science
 
 profile:
   align: right
@@ -27,7 +27,7 @@ profile:
             <i class="fa-solid fa-building-columns office-location__icon"></i>
           </span>
           <div class="office-location__label-text">
-            <strong>Arizona State University</strong>
+            <strong>Arizona State University (ASU)</strong>
             <span>Tempe, AZ 85281</span>
           </div>
         </div>
@@ -68,7 +68,7 @@ latest_posts:
 
 <div class="content-section-card content-section-card--bio" markdown="1">
 
-I work at the intersection of educational technology, human-computer interaction, and applied machine learning. I build and study how adaptive learning and personalized tutoring systems, collaboration tools, information visualizations, immersive training, and other forms of human-in-the-loop technology-enhanced learning can help diverse learners and educators succeed across formal education and workforce training contexts.
+I work at the intersection of educational technology, human-computer interaction, and applied machine learning. I build and study how adaptive learning, personalized tutoring systems, interactive learning envioronments, collaboration tools, information visualization, immersive training, and other forms of technology-enhanced learning can help diverse learners and educators succeed across formal education and workforce training contexts.
 
 Currently, I split my time between the [Sonoran Visualization Lab (SVL)](https://chrisbryan.github.io/) led by Dr. Chris Bryan in the School of Computing and Augmented Intelligence and the [Construction Workforce and Technology (CWT) Lab](https://www.cwt-lab.com/) led by Dr. Ricardo Eiris in the School of Sustainable Engineering and the Built Environment at ASU.
 
@@ -88,7 +88,7 @@ If you're interested in collaborating, please feel free to reach out: [rtwoo@asu
 <figure class="interest-flow-figure" aria-labelledby="interest-flow-caption">
   <div class="interest-flow" role="img" aria-label="A flow diagram showing computer science, education, and cognitive science and psychology converging into human-computer interaction and educational technology."></div>
   <figcaption id="interest-flow-caption">
-    <span class="interest-flow-caption__label">Figure 1.</span> The thread connecting my work is the design and evaluation of technology that helps people teach, learn, interpret, reason, collaborate, and problem solve more effectively or efficiently.
+    <span class="interest-flow-caption__label">Figure 1.</span> My research interests.
   </figcaption>
 </figure>
 

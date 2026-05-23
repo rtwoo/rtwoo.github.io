@@ -26,21 +26,27 @@
         {% endif %}
       {% endif %}
       {% if entry.preview %}
-        {% if entry.preview contains '://' %}
-          <img class="preview z-depth-1" src="{{ entry.preview }}">
-        {% else %}
-          {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
-          {%
-            include figure.liquid
-            loading="eager"
-            path=entry_path
-            sizes = "200px"
-            class="preview z-depth-1"
-            zoomable=true
-            avoid_scaling=true
-            alt=entry.preview
-          %}
-        {% endif %}
+        <div class="preview-frame">
+          {% if entry.preview contains '://' %}
+            <img class="preview z-depth-1" src="{{ entry.preview }}" alt="{{ entry.title | escape }} preview">
+          {% else %}
+            {% if entry.preview contains '/' %}
+              {% assign entry_path = entry.preview %}
+            {% else %}
+              {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
+            {% endif %}
+            {%
+              include figure.liquid
+              loading="eager"
+              path=entry_path
+              sizes = "200px"
+              class="preview z-depth-1"
+              zoomable=true
+              avoid_scaling=true
+              alt=entry.title
+            %}
+          {% endif %}
+        </div>
       {% endif %}
     </div>
   {% endif %}

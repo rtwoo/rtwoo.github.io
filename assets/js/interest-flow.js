@@ -48,12 +48,14 @@
     {
       id: "analytics",
       title: "Learning Analytics",
+      titleLines: ["Learning Analytics"],
       detail: "evidence and insight",
       color: "#007c89",
     },
     {
       id: "immersive",
       title: "Immersive Training",
+      titleLines: ["Immersive Training"],
       detail: "situated practice",
       color: "#7a6752",
     },

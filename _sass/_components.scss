@@ -172,7 +172,7 @@ ul.task-list input[type="checkbox"] {
 
   display: inline-flex;
   align-items: center;
-  margin: -0.45rem 0 0.75rem;
+  margin: -0.45rem 0 0;
   padding: 0.35rem 0.55rem 0.3rem;
   border-left: 2px solid var(--global-theme-color);
   border-bottom: 1px solid var(--about-contact-border);
@@ -788,6 +788,14 @@ ul.task-list input[type="checkbox"] {
       }
     }
   }
+
+  .profile.float-right {
+    margin-top: -0.75rem;
+  }
+
+  .profile.float-right figure {
+    margin-top: -3.5rem;
+  }
 }
 
 // CV
@@ -873,7 +881,7 @@ ul.task-list input[type="checkbox"] {
 
 .interest-flow-figure {
   clear: both;
-  margin: 0.85rem 0 2.4rem;
+  margin: 0rem 0 2.4rem;
 }
 
 .interest-flow {
