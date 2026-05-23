@@ -456,8 +456,9 @@ nav[data-toggle="toc"] {
   z-index: 2147483647 !important;
 }
 
+img[data-zoomable],
 .medium-zoom-image--opened {
-  position: fixed !important;
+  background-color: #fff;
 }
 
 #toc-sidebar {

@@ -172,7 +172,7 @@ ul.task-list input[type="checkbox"] {
 
   display: inline-flex;
   align-items: center;
-  margin: -0.45rem 0 0;
+  margin: -0.45rem 0 .45rem;
   padding: 0.35rem 0.55rem 0.3rem;
   border-left: 2px solid var(--global-theme-color);
   border-bottom: 1px solid var(--about-contact-border);
@@ -606,19 +606,54 @@ ul.task-list input[type="checkbox"] {
 }
 
 .office-location {
+  --section-card-accent: var(--global-ambient-color);
+  --section-card-bg: color-mix(in srgb, var(--global-card-bg-color) 96%, var(--global-theme-color) 4%);
+  --section-card-border: color-mix(in srgb, var(--global-text-color-light) 42%, transparent);
+  --section-card-shadow: color-mix(in srgb, var(--global-ambient-color) 38%, transparent);
+
   position: relative;
   display: block;
   padding: 0.72rem 0.72rem 0.78rem;
-  border: 1px solid color-mix(in srgb, var(--global-text-color-light) 32%, transparent);
-  background:
-    linear-gradient(var(--global-card-bg-color), var(--global-card-bg-color)) padding-box,
-    repeating-linear-gradient(
-      135deg,
-      color-mix(in srgb, var(--global-theme-color) 13%, transparent) 0 1px,
-      transparent 1px 9px
-  );
-  box-shadow: 6px 6px 0 color-mix(in srgb, var(--global-ambient-color) 28%, transparent);
+  border: 1px solid var(--section-card-border);
+  border-radius: 0;
+  background-color: var(--section-card-bg);
+  background-image:
+    linear-gradient(var(--section-card-accent), var(--section-card-accent)),
+    linear-gradient(var(--section-card-accent), var(--section-card-accent)),
+    linear-gradient(var(--section-card-accent), var(--section-card-accent)),
+    linear-gradient(var(--section-card-accent), var(--section-card-accent));
+  background-position:
+    left top,
+    left bottom,
+    left bottom,
+    right top;
+  background-repeat: no-repeat;
+  background-size:
+    0 2px,
+    0 2px,
+    2px 0,
+    2px 0;
+  box-shadow: 12px 12px 0 var(--section-card-shadow);
   overflow: hidden;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background-size 220ms ease,
+    transform 180ms ease;
+
+  &:hover,
+  &:focus-within {
+    border-color: color-mix(in srgb, var(--section-card-accent) 70%, var(--section-card-border));
+    background-color: var(--global-card-bg-color);
+    background-size:
+      100% 2px,
+      100% 2px,
+      2px 100%,
+      2px 100%;
+    box-shadow: 12px 12px 0 var(--section-card-shadow);
+    transform: none;
+  }
 }
 
 .office-location__details {
@@ -913,8 +948,8 @@ ul.task-list input[type="checkbox"] {
 }
 
 .interest-flow__background {
-  fill: color-mix(in srgb, var(--global-card-bg-color) 42%, transparent);
-  stroke: color-mix(in srgb, var(--global-divider-color) 72%, transparent);
+  fill: none;
+  stroke: none;
   stroke-width: 1;
   vector-effect: non-scaling-stroke;
   pointer-events: none;

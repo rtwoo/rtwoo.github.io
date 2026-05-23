@@ -88,7 +88,7 @@ If you're interested in collaborating, please feel free to reach out: [rtwoo@asu
 <figure class="interest-flow-figure" aria-labelledby="interest-flow-caption">
   <div class="interest-flow" role="img" aria-label="A flow diagram showing computer science, education, and cognitive science and psychology converging into human-computer interaction and educational technology."></div>
   <figcaption id="interest-flow-caption">
-    <span class="interest-flow-caption__label">Figure 1.</span> My research interests.
+    <span class="interest-flow-caption__label">Figure 1.</span> The research interests of Ryan T. Woo.
   </figcaption>
 </figure>
 
