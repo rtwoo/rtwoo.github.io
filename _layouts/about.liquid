@@ -1,0 +1,111 @@
+---
+layout: default
+---
+<div class="post">
+  <header class="post-header about-identity">
+    <h1 class="post-title terminal-heading">
+      {% if site.title == 'blank' %}
+        <span class="about-identity__name">
+          <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+          {{ site.last_name }}
+        </span>
+        {% include terminal_prompt.liquid path='~' %}
+      {% else %}
+        {{ site.title }}
+      {% endif %}
+    </h1>
+    <p class="desc">{{ page.subtitle }}</p>
+  </header>
+
+  <article>
+    {% if page.profile %}
+      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+        {% if page.profile.image %}
+          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+          {% if page.profile.image_circular %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 profile-image profile-image--circular' %}
+          {% else %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 profile-image' %}
+          {% endif %}
+          {% if page.profile.orbit and page.profile.orbit.enabled %}
+            {% assign orbit_frames_path = page.profile.orbit.frames_path | default: 'assets/img/profile-orbit/facelift-yaw' %}
+            {% assign orbit_frame_count = page.profile.orbit.frame_count | default: 32 %}
+            {% assign orbit_frame_prefix = page.profile.orbit.frame_prefix | default: 'frame_' %}
+            {% assign orbit_frame_suffix = page.profile.orbit.frame_suffix | default: '_landmarks_pose.png' %}
+            {% assign orbit_frame_pad = page.profile.orbit.frame_pad | default: 3 %}
+            {% assign orbit_yaw_left_frame = page.profile.orbit.yaw_left_frame | default: 16 %}
+            {% assign orbit_yaw_center_frame = page.profile.orbit.yaw_center_frame | default: 24 %}
+            {% assign orbit_yaw_right_frame = page.profile.orbit.yaw_right_frame | default: 32 %}
+            {% assign orbit_asset_version = page.profile.orbit.asset_version | default: '' %}
+            <div
+              class="profile-orbit"
+              data-profile-orbit
+              data-frame-base="{{ orbit_frames_path | relative_url }}"
+              data-frame-count="{{ orbit_frame_count }}"
+              data-frame-prefix="{{ orbit_frame_prefix }}"
+              data-frame-suffix="{{ orbit_frame_suffix }}"
+              data-frame-pad="{{ orbit_frame_pad }}"
+              data-yaw-left-frame="{{ orbit_yaw_left_frame }}"
+              data-yaw-center-frame="{{ orbit_yaw_center_frame }}"
+              data-yaw-right-frame="{{ orbit_yaw_right_frame }}"
+              data-frame-version="{{ orbit_asset_version }}"
+              tabindex="0"
+              aria-label="Interactive profile portrait. Hover and move horizontally to rotate the computer vision orbit."
+            >
+          {% endif %}
+          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
+      30vw, 95vw"{% endcapture %}
+          {%
+            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+            cache_bust=true
+          %}
+          {% if page.profile.orbit and page.profile.orbit.enabled %}
+            </div>
+          {% endif %}
+        {% endif %}
+        {% if page.profile.more_info %}
+          <div class="more-info">{{ page.profile.more_info }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="clearfix">{{ content }}</div>
+
+    <!-- News -->
+    {% if page.announcements and page.announcements.enabled %}
+      <h2>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
+      </h2>
+      {% include news.liquid limit=true %}
+    {% endif %}
+
+    <!-- Latest posts -->
+    {% if page.latest_posts and page.latest_posts.enabled %}
+      <h2>
+        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">Latest Posts</a>
+      </h2>
+      {% include latest_posts.liquid %}
+    {% endif %}
+
+    <!-- Selected papers -->
+    {% if page.selected_papers and page.selected_papers_position != 'inline' %}
+      <h2>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
+      </h2>
+      {% include selected_papers.liquid %}
+    {% endif %}
+
+    <!-- Social -->
+    {% if page.social %}
+      <div class="social">
+        <div class="contact-icons">{% social_links %}</div>
+
+        <div class="contact-note">{{ site.contact_note }}</div>
+      </div>
+    {% endif %}
+
+    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
+      {% include newsletter.liquid center=true %}
+    {% endif %}
+  </article>
+</div>

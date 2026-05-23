@@ -1,0 +1,62 @@
+/*******************************************************************************
+ * Variables used throughout the theme.
+ * To adjust anything, simply edit the variables below and rebuild the theme.
+ ******************************************************************************/
+
+@use "sass:color";
+
+// Colors
+$asu-maroon: #8c1d40 !default;
+$asu-gold: #ffc627 !default;
+$asu-green: #78be20 !default;
+$asu-blue: #00a3e0 !default;
+$asu-orange: #ff7f32 !default;
+$asu-gray: #747474 !default;
+$asu-copper: #af674b !default;
+$asu-turquoise: #4ab7c4 !default;
+$asu-pink: #e74973 !default;
+
+$red-color: $asu-maroon !default;
+$red-color-dark: color.adjust($asu-maroon, $lightness: -10%) !default;
+$orange-color: $asu-orange !default;
+$blue-color: $asu-blue !default;
+$blue-color-dark: color.adjust($asu-blue, $lightness: -20%) !default;
+$cyan-color: $asu-turquoise !default;
+$light-cyan-color: color.adjust($cyan-color, $lightness: 25%);
+$green-color: $asu-green !default;
+$green-color-lime: #b7d12a !default;
+$green-color-dark: #009f06 !default;
+$green-color-light: #ddffdd !default;
+$green-color-bright: #11d68b !default;
+$purple-color: $asu-maroon !default;
+$light-purple-color: color.adjust($purple-color, $lightness: 25%);
+$pink-color: $asu-pink !default;
+$pink-color-light: #ffdddd !default;
+$yellow-color: $asu-gold !default;
+
+$grey-color: $asu-gray !default;
+$grey-color-light: color.adjust($grey-color, $lightness: 40%);
+$grey-color-dark: #1c1c1d;
+$grey-900: #212529;
+
+$white-color: #ffffff !default;
+$black-color: #000000 !default;
+
+// Theme colors
+
+$code-bg-color-light: rgba($asu-maroon, 0.05);
+$code-bg-color-dark: #2c3237 !default;
+
+// Font awesome location
+$fa-font-path: "../webfonts";
+
+// Back To Top button config
+$back-to-top-z-index: 10;
+$back-to-top-bottom: 30px;
+$back-to-top-right: 30px;
+$back-to-top-diameter: 40px;
+$back-to-top-height: $back-to-top-diameter;
+$back-to-top-width: $back-to-top-diameter;
+
+// Max width default
+$max-content-width: 930px !default;

@@ -1,0 +1,15 @@
+"arXiv":
+  url: https://arxiv.org/
+  color: "#b31b1b"
+
+"WACV":
+  url: https://wacv2026.thecvf.com/
+  color: "#005f73"
+
+"BEA":
+  url: https://sig-edu.org/bea/current
+  color: "#0a9396"
+
+"NeurIPS":
+  url: https://neurips.cc/
+  color: "#9b2226"

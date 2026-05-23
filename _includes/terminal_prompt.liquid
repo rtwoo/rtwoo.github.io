@@ -1,0 +1,12 @@
+{% assign terminal_path = include.path | default: page.terminal_path %}
+{% if terminal_path == blank %}
+  {% assign source_path = page.permalink | default: page.url %}
+  {% if source_path == '/' %}
+    {% assign terminal_path = '~' %}
+  {% else %}
+    {% assign terminal_path_parts = source_path | remove_first: '/' | split: '/' %}
+    {% assign terminal_path_clean = terminal_path_parts | join: '/' %}
+    {% assign terminal_path = '~/' | append: terminal_path_clean %}
+  {% endif %}
+{% endif %}
+<span class="terminal-prompt" aria-hidden="true"><span class="terminal-prompt__user">rtwoo</span><span class="terminal-prompt__host">@asu.edu</span><span class="terminal-prompt__sep">:</span><span class="terminal-prompt__path">{{ terminal_path }}</span><span class="terminal-prompt__dollar">$</span><span class="terminal-prompt__space">&nbsp;</span></span>
