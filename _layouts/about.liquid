@@ -108,4 +108,57 @@ layout: default
       {% include newsletter.liquid center=true %}
     {% endif %}
   </article>
+
+  <button type="button" class="about-scroll-cue" aria-label="Scroll to selected publications">
+    <span>Scroll for more</span>
+    <span class="about-scroll-cue__arrow">↓</span>
+  </button>
 </div>
+
+<script>
+  (function () {
+    var cue = document.querySelector('.about-scroll-cue');
+    var target = document.getElementById('selected-publications-section');
+    var targetHeading = document.getElementById('selected-publications-heading');
+
+    if (!cue || !target || !targetHeading) return;
+
+    function getNavOffset() {
+      var nav = document.querySelector('#navbar');
+      var offset = 0;
+
+      if (nav) {
+        offset = Math.ceil(nav.getBoundingClientRect().height || nav.offsetHeight || 0);
+      }
+
+      return offset + 18;
+    }
+
+    function updateAboutScrollCue() {
+      var footer = document.querySelector('body > footer');
+      var footerOffset = 0;
+      if (footer && footer.classList.contains('fixed-bottom')) {
+        footerOffset = footer.offsetHeight || 0;
+      }
+      cue.style.setProperty('--about-scroll-cue-footer-offset', footerOffset + 'px');
+
+      var targetRect = targetHeading.getBoundingClientRect();
+      var targetReached = targetRect.top <= getNavOffset() + 8;
+      var canScrollToTarget = targetRect.top > window.innerHeight * 0.55;
+
+      cue.classList.toggle('is-hidden', targetReached || !canScrollToTarget);
+    }
+
+    cue.addEventListener('click', function () {
+      var targetTop = window.scrollY + targetHeading.getBoundingClientRect().top - getNavOffset();
+      window.scrollTo({
+        top: Math.max(0, targetTop),
+        behavior: 'smooth',
+      });
+    });
+
+    updateAboutScrollCue();
+    window.addEventListener('scroll', updateAboutScrollCue, { passive: true });
+    window.addEventListener('resize', updateAboutScrollCue);
+  })();
+</script>

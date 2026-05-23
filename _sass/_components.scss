@@ -262,6 +262,92 @@ ul.task-list input[type="checkbox"] {
   list-style: none;
 }
 
+.about-scroll-cue {
+  --about-scroll-cue-footer-offset: 0px;
+
+  position: fixed;
+  left: 50%;
+  bottom: calc(1.1rem + var(--about-scroll-cue-footer-offset));
+  transform: translateX(-50%);
+  z-index: 1050;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.48rem 0.78rem;
+  border: 1px solid color-mix(in srgb, var(--global-theme-color) 56%, var(--global-text-color-light));
+  background: color-mix(in srgb, var(--global-bg-color) 68%, transparent);
+  color: color-mix(in srgb, var(--global-text-color) 88%, var(--global-theme-color));
+  font-size: 0.81rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  pointer-events: auto;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--global-ambient-color) 28%, transparent);
+  opacity: 0.98;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease,
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
+.about-scroll-cue:hover,
+.about-scroll-cue:focus-visible {
+  border-color: color-mix(in srgb, var(--global-theme-color) 78%, var(--global-text-color-light));
+  background: color-mix(in srgb, var(--global-card-bg-color) 90%, transparent);
+  color: var(--global-theme-color);
+  box-shadow: 0 10px 22px color-mix(in srgb, var(--global-ambient-color) 32%, transparent);
+  transform: translateX(-50%) translateY(-2px);
+}
+
+.about-scroll-cue:focus-visible {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 3px;
+}
+
+.about-scroll-cue__arrow {
+  display: inline-block;
+  font-size: 0.92rem;
+  line-height: 1;
+  animation: about-scroll-cue-bounce 1.35s ease-in-out infinite;
+}
+
+.about-scroll-cue.is-hidden {
+  opacity: 0;
+  transform: translateX(-50%) translateY(10px);
+  pointer-events: none;
+}
+
+@keyframes about-scroll-cue-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-scroll-cue__arrow {
+    animation: none;
+  }
+
+  .about-scroll-cue {
+    transition: opacity 220ms ease;
+    transform: translateX(-50%);
+  }
+}
+
+.about-selected-publications {
+  margin-top: clamp(2.6rem, 6.5vh, 4.25rem);
+  scroll-margin-top: 78px;
+}
+
 .awards-recognition__list li {
   display: grid;
   grid-template-columns: 4.25rem minmax(0, 1fr);
@@ -916,7 +1002,7 @@ ul.task-list input[type="checkbox"] {
 
 .interest-flow-figure {
   clear: both;
-  margin: 0rem 0 2.4rem;
+  margin: 0.6rem 0 2.4rem;
 }
 
 .interest-flow {
@@ -935,7 +1021,7 @@ ul.task-list input[type="checkbox"] {
 .interest-flow figcaption,
 .interest-flow-figure figcaption {
   max-width: 46rem;
-  margin: 0.04rem auto 0;
+  margin: 0rem auto 0;
   color: color-mix(in srgb, var(--global-text-color) 55%, var(--global-text-color-light));
   font-size: 0.84rem;
   line-height: 1.35;

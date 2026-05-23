@@ -85,18 +85,16 @@ If you're interested in collaborating, please feel free to reach out: [rtwoo@asu
   </div>
 </div>
 
-<figure class="interest-flow-figure" aria-labelledby="interest-flow-caption">
+
   <div class="interest-flow" role="img" aria-label="A flow diagram showing computer science, education, and cognitive science and psychology converging into human-computer interaction and educational technology."></div>
-  <figcaption id="interest-flow-caption">
-    <span class="interest-flow-caption__label">Figure 1.</span> The research interests of Ryan T. Woo.
-  </figcaption>
-</figure>
 
 {% if page.selected_papers %}
-<h2>
-  <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
-</h2>
-{% include selected_papers.liquid %}
+<section id="selected-publications-section" class="about-selected-publications" aria-labelledby="selected-publications-heading">
+  <h2 id="selected-publications-heading">
+    <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
+  </h2>
+  {% include selected_papers.liquid %}
+</section>
 {% endif %}
 
 <section class="awards-recognition" aria-labelledby="awards-recognition-heading">
