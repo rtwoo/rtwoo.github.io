@@ -453,7 +453,11 @@ nav[data-toggle="toc"] {
 
 .medium-zoom-overlay,
 .medium-zoom-image--opened {
-  z-index: 999;
+  z-index: 2147483647 !important;
+}
+
+.medium-zoom-image--opened {
+  position: fixed !important;
 }
 
 #toc-sidebar {
