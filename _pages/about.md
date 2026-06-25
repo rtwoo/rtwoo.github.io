@@ -78,10 +78,10 @@ If you're interested in collaborating, please feel free to reach out: [rtwoo@asu
 
 <div class="about-contact-strip" aria-label="Contact and account links">
   <div class="contact-icons">
-    <a href="https://scholar.google.com/citations?user=lK7zmLYAAAAJ" title="Google Scholar" rel="external nofollow noopener" target="_blank"><i class="ai ai-google-scholar"></i></a>
-    <a href="https://github.com/rtwoo" title="GitHub" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/rtwoo" title="LinkedIn" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-    <a href="https://search.asu.edu/profile/3798829" title="ASU Profile" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-building-columns"></i></a>
+    <a href="https://scholar.google.com/citations?user=lK7zmLYAAAAJ" title="Google Scholar" rel="external noopener" target="_blank"><i class="ai ai-google-scholar"></i></a>
+    <a href="https://github.com/rtwoo" title="GitHub" rel="external noopener" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/rtwoo" title="LinkedIn" rel="external noopener" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://search.asu.edu/profile/3798829" title="ASU Profile" rel="external noopener" target="_blank"><i class="fa-solid fa-building-columns"></i></a>
   </div>
 </div>
 

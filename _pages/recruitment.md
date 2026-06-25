@@ -4,6 +4,8 @@ permalink: /recruitment/
 title: Recruitment Materials
 description: Recruitment and survey materials referenced by this site.
 nav: false
+sitemap: false
+robots: noindex, follow
 ---
 
 This page collects the recruitment and survey materials referenced on this site.
