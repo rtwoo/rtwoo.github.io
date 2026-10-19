@@ -1,6 +1,18 @@
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
 
+{% if page.citation %}
+  <!-- Scholarly article metadata for Google Scholar -->
+  <meta name="citation_title" content="{{ page.title | escape }}">
+  {% for author in page.citation.authors %}
+    <meta name="citation_author" content="{{ author | escape }}">
+  {% endfor %}
+  <meta name="citation_publication_date" content="{{ page.citation.year }}">
+  <meta name="citation_online_date" content="{{ page.citation.online_date }}">
+  <meta name="citation_conference_title" content="{{ page.citation.conference | escape }}">
+  <meta name="citation_pdf_url" content="{{ page.citation.pdf | absolute_url }}">
+{% endif %}
+
 <!-- Security: Content Security Policy -->
 <!-- Permissive CSP suitable for academic websites. Allows external images, videos, and common embed services. -->
 <!-- To customize for your needs, see: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
