@@ -10,19 +10,14 @@
   <link rel="stylesheet" href="./styles.css">
   <script src="./app.js" defer></script>
 </head>
-<body>
+<body class="exhibit-page">
   <a class="skip-link" href="#explorer">Skip to the demo</a>
   <header class="site-header">
     <a class="brand" href="https://www.cwt-lab.com/" aria-label="CWT Lab home"><span class="wordmark">CWT <span>LAB</span></span></a>
     <span class="brand-description">Construction Workforce<br>&amp; Technology Lab</span>
     <a class="lab-link" href="https://www.cwt-lab.com/" target="_blank" rel="noopener noreferrer">Visit the lab <span aria-hidden="true">↗</span></a>
   </header>
-  <main>
-    <div class="intro">
-      <div><p class="eyebrow">CWT LAB <span>/</span> INTERACTIVE EXHIBIT</p><h1>Human Behavior Explorer<span>.</span></h1>
-      <p class="lede">See how computer vision reads facial expressions, body pose, and hand gestures.</p></div>
-      <div class="local-note"><span class="status-dot" aria-hidden="true"></span>Runs in your browser<br><small>Camera video stays on this device</small></div>
-    </div>
+  <main class="exhibit-main">
     <section class="exhibit" id="explorer" aria-label="Human behavior demo">
       <div class="exhibit-bar">
         <div class="session-state"><span class="state-light" id="state-light" aria-hidden="true"></span><span id="session-status" role="status">Ready to explore</span></div>
@@ -54,21 +49,17 @@
           </div>
         </div>
         <div id="demo-mount" hidden></div>
+        <p id="session-help" class="session-help" role="status" hidden></p>
       </div>
-      <div class="exhibit-credit"><span>POWERED BY <a href="https://github.com/vladmandic/human" target="_blank" rel="noopener noreferrer">Human</a> <span class="credit-divider">/</span> Vladimir Mandic</span><a href="https://vladmandic.github.io/human/demo/index.html" target="_blank" rel="noopener noreferrer">Original live demo ↗</a></div>
+      <footer class="exhibit-credit">
+        <div class="publication-credit">
+          <p class="modification-credit">Modified and extended by Ryan T. Woo in:</p>
+          <p class="publication"><strong>R. T. Woo</strong>, F. Ahmed, P. Bhadaniya, R. Eiris and M. Ghesari. Do Student Emotions Influence Learning During Virtual Field Trips? A Computer Vision Analysis of Emotion States in Desktop-based Virtual Reality. <em>ASCE International Conference on Computing in Civil Engineering (i3CE) 2026.</em></p>
+        </div>
+        <p class="upstream-credit"><a href="./credits.html">Human by Vladimir Mandic</a><br><a href="./HUMAN-LICENSE.txt">MIT License</a></p>
+      </footer>
     </section>
-    <p id="session-help" class="session-help" role="status" hidden></p>
-    <section class="explore-guide" aria-label="Things to try">
-      <article><span class="guide-number">01</span><div><h2>Face &amp; expression</h2><p>Smile, turn your head, or raise your eyebrows. Watch the face mesh and expression predictions.</p></div></article>
-      <article><span class="guide-number">02</span><div><h2>Body &amp; pose</h2><p>Step back and raise your arms. Keep your whole body in view to explore the pose skeleton.</p></div></article>
-      <article><span class="guide-number">03</span><div><h2>Hands &amp; gestures</h2><p>Bring your hands into view. Open your palm, make a fist, and watch the finger tracking.</p></div></article>
-    </section>
-    <div class="details-row">
-      <details><summary>Exhibit tips &amp; controls</summary><div class="details-content"><p>Use one participant, even lighting, and a clear view of the camera. A recent Chrome or Edge browser is a good starting point on Windows or macOS.</p><p>Inside the demo, <strong>Models</strong> switches features on and off. <strong>Display</strong> changes overlays. <strong>Options</strong> includes performance settings. The first inference can take a little longer while models download.</p><p><strong>Pause video</strong> pauses analysis but keeps the camera connected. Use <strong>Stop &amp; reset</strong> above to release it. If access is denied, allow the camera in your browser’s site settings and relaunch. Internet access is required to load the library and models.</p></div></details>
-      <details><summary>About this demo &amp; attribution</summary><div class="details-content"><p>Presented by the <a href="https://www.cwt-lab.com/">Construction Workforce &amp; Technology Lab</a>. The interface wraps a locally hosted adaptation of <a href="https://github.com/vladmandic/human">Human</a> by Vladimir Mandic, with the original model and display controls.</p><p>Human is used under the <a href="./HUMAN-LICENSE.txt">MIT License</a>. See <a href="./credits.html">credits and source details</a> for the upstream version, model attribution, and CWT adaptations.</p><p>Camera frames are processed in your browser. This exhibit does not record or upload them. Expression categories are model estimates, not measurements of a person’s internal emotional state.</p></div></details>
-    </div>
   </main>
-  <footer class="site-footer"><span>CWT LAB <span class="footer-slash">/</span> Exploring human–computer interaction</span><a href="./credits.html">Credits &amp; source</a></footer>
   <noscript><p class="no-script">JavaScript is required to run the live demo. Please enable it and reload.</p></noscript>
 </body>
 </html>

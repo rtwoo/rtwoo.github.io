@@ -1,5 +1,4 @@
 /* CWT Lab exhibit shell. Human demo attribution: ./credits.html */
-const exhibit = document.querySelector('.exhibit');
 const welcome = document.querySelector('#welcome');
 const mount = document.querySelector('#demo-mount');
 const status = document.querySelector('#session-status');
@@ -20,8 +19,7 @@ function launch(mode) {
   welcome.hidden = true;
   mount.hidden = false;
   stop.disabled = false;
-  help.hidden = false;
-  help.textContent = 'Loading Human and its models. The first run may take a moment.';
+  help.hidden = true;
   setStatus('Loading demo…', 'loading');
   frame = document.createElement('iframe');
   frame.title = 'Human live computer vision demo';
@@ -61,12 +59,8 @@ window.addEventListener('message', event => {
   if (state === 'ready') { setStatus('Demo ready', 'loading'); return; }
   clearTimeout(loadingTimer);
   setStatus(detail, state);
-  help.hidden = false;
-  help.textContent = state === 'error'
-    ? 'Check camera permission and your connection, then choose Stop & reset to retry. You can also try the sample image.'
-    : state === 'sample'
-      ? 'This is a sample image, not a live feed. Choose Stop & reset to launch your camera.'
-      : 'Use Models to select features, Display to adjust overlays, and Stop & reset to release the camera.';
+  help.hidden = state !== 'error';
+  help.textContent = 'Check camera permission and your connection, then choose Stop & reset to retry. You can also try the sample image.';
 });
 
 document.querySelector('#launch').addEventListener('click', () => launch('camera'));
@@ -75,7 +69,7 @@ stop.addEventListener('click', reset);
 fullscreen.addEventListener('click', async () => {
   try {
     if (document.fullscreenElement) await document.exitFullscreen();
-    else await exhibit.requestFullscreen();
+    else await document.documentElement.requestFullscreen();
   } catch {
     help.hidden = false;
     help.textContent = 'Fullscreen is unavailable in this browser. Use your browser’s fullscreen command instead.';
