@@ -29,3 +29,15 @@ Update the pinned version in `demo/index.js` and `demo/index-worker.js` together
 ## Exhibit layout
 
 The CWT Lab header, one viewport-filling demo panel, and a compact publication-credit footer make up the page. The citation credits Ryan T. Woo and the supplied i3CE 2026 publication. Fullscreen retains the CWT Lab header and citation. Human attribution and the MIT license remain available; the original live-demo link is removed.
+
+## Multiple participants
+
+The toolbar's **Subject limit** defaults to 4 and supports 1–6. Changing it restarts the current live or sample session and releases the previous camera tracks. The iframe also accepts `?subjects=1` through `?subjects=6`; invalid values default to 4, numeric values are clamped.
+
+`demo/participants.js` applies the same limit to face detection and MoveNet MultiPose, with up to twice as many hands. The MultiPose model and its weights are pinned to Human Models revision `bc66dc53bac03c96d35a7e6daaf717e72f3985f5`; the standard single-pose model cannot detect several bodies by simply increasing a limit. All processing remains in the browser.
+
+**Group sample** uses `samples/in/stock-group-2.jpg` from the same pinned upstream revision as the single-person sample. Use clear, separated subjects for an exhibit; face and hand detail may be lost when people are far from the camera. More faces and hands increase inference cost.
+
+Frame skipping and the image cache are disabled for group defaults so newly arriving subjects and expressions refresh each inference. Index-based interpolation is off to avoid blending poses when detection order changes. Labels identify individual detections, not persistent people, and face/pose/hand IDs are independent.
+
+Validate `node --test cwt-human/tests/participants.test.mjs`, the single and group samples, limits 1 and 6, changing limits during a session, reset, and narrow-screen layout. In-person frame rate and occlusion behavior still require a camera rehearsal with the intended group and hardware.

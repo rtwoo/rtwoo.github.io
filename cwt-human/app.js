@@ -6,6 +6,8 @@ const light = document.querySelector('#state-light');
 const help = document.querySelector('#session-help');
 const stop = document.querySelector('#stop');
 const fullscreen = document.querySelector('#fullscreen');
+const subjects = document.querySelector('#subjects');
+let currentMode;
 let frame;
 let loadingTimer;
 
@@ -16,6 +18,7 @@ function setStatus(text, state = '') {
 
 function launch(mode) {
   if (frame) reset();
+  currentMode = mode;
   welcome.hidden = true;
   mount.hidden = false;
   stop.disabled = false;
@@ -26,8 +29,11 @@ function launch(mode) {
   frame.allow = 'camera; fullscreen';
   frame.referrerPolicy = 'strict-origin-when-cross-origin';
   const url = new URL('./demo/', window.location.href);
-  if (mode === 'sample') {
-    const image = 'https://cdn.jsdelivr.net/gh/vladmandic/human@d0c4c83155fd2325dbb4725ffcaf0ed0109f319c/samples/in/ai-upper.jpg';
+  url.searchParams.set('subjects', subjects.value);
+  url.searchParams.set('v', '20261027-multi1');
+  if (mode === 'sample' || mode === 'group') {
+    const filename = mode === 'group' ? 'stock-group-2.jpg' : 'ai-upper.jpg';
+    const image = `https://cdn.jsdelivr.net/gh/vladmandic/human@d0c4c83155fd2325dbb4725ffcaf0ed0109f319c/samples/in/${filename}`;
     url.searchParams.set('image', JSON.stringify(image));
   } else {
     url.searchParams.set('play', 'true');
@@ -46,6 +52,7 @@ function reset() {
   try { frame?.contentDocument?.querySelector('video')?.srcObject?.getTracks().forEach(track => track.stop()); } catch { /* Frame may already be unloaded. */ }
   mount.replaceChildren();
   frame = null;
+  currentMode = null;
   mount.hidden = true;
   welcome.hidden = false;
   stop.disabled = true;
@@ -65,6 +72,11 @@ window.addEventListener('message', event => {
 
 document.querySelector('#launch').addEventListener('click', () => launch('camera'));
 document.querySelector('#sample').addEventListener('click', () => launch('sample'));
+document.querySelector('#group-sample').addEventListener('click', () => launch('group'));
+subjects.addEventListener('change', () => {
+  // A fresh frame releases capture and model caches before applying new limits.
+  if (frame) launch(currentMode);
+});
 stop.addEventListener('click', reset);
 fullscreen.addEventListener('click', async () => {
   try {

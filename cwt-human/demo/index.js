@@ -25,6 +25,7 @@
 
 import { Human } from 'https://cdn.jsdelivr.net/npm/@vladmandic/human@3.3.6/dist/human.esm.js'; // equivalent of @vladmandic/human
 import Menu from './helpers/menu.js';
+import { createExhibitConfig } from './participants.js?v=20261027-multi1';
 import GLBench from './helpers/gl-bench.js';
 import webRTC from './helpers/webrtc.js';
 import jsonView from './helpers/jsonview.js';
@@ -32,19 +33,8 @@ import jsonView from './helpers/jsonview.js';
 let human;
 
 // CWT exhibit defaults. Original Human demo by Vladimir Mandic (MIT).
-let userConfig = {
-  backend: 'webgl',
-  modelBasePath: 'https://cdn.jsdelivr.net/npm/@vladmandic/human@3.3.6/models/',
-  face: {
-    enabled: true, detector: { maxDetected: 1 },
-    mesh: { enabled: true }, iris: { enabled: true },
-    emotion: { enabled: true }, description: { enabled: false },
-  },
-  body: { enabled: true },
-  hand: { enabled: true, maxDetected: 2 },
-  gesture: { enabled: true },
-  object: { enabled: false },
-};
+let userConfig = createExhibitConfig(new URLSearchParams(location.search).get('subjects'));
+
 function notifyExhibit(state, detail = '') {
   if (parent !== window) parent.postMessage({ type: 'cwt-human', state, detail }, location.origin);
 }
@@ -60,6 +50,12 @@ const drawOptions = {
   fillPolygons: false,
   useCurves: false,
   useDepth: true,
+  // Compact per-detection labels keep group overlays readable. These are not persistent identities.
+  faceLabels: 'Face #[id] · [score]%\n[emotions]',
+  bodyLabels: 'Pose #[id] · [score]%',
+  bodyPartLabels: '',
+  handLabels: 'Hand #[id] · [label]',
+  fingerLabels: '',
 };
 
 // ui options
@@ -76,7 +72,7 @@ const ui = {
   modelsPreload: false, // preload human models on startup
   modelsWarmup: false, // warmup human models on startup
   buffered: true, // should output be buffered between frames
-  interpolated: true, // should output be interpolated for smoothness between frames
+  interpolated: false, // should output be interpolated for smoothness between frames
   iconSize: '48px', // ui icon sizes
   autoPlay: false, // start webcam & detection on load
 
@@ -264,7 +260,7 @@ async function drawResults(input) {
   let interpolated;
   if (ui.interpolated) interpolated = human.next(result);
   else interpolated = result;
-  human.draw.all(canvas, interpolated, drawOptions);
+  await human.draw.all(canvas, interpolated, drawOptions);
 
   // show tree with results
   if (ui.results) {
@@ -297,6 +293,7 @@ async function drawResults(input) {
   document.getElementById('log').textContent =
     `Faces: ${result.face?.length || 0}  ·  Body poses: ${result.body?.length || 0}  ·  Hands: ${result.hand?.length || 0}` +
     (input instanceof HTMLVideoElement ? `  ·  Inference: ${avgDetect} FPS` : '  ·  Sample image') +
+    `  ·  Subject limit: ${userConfig.face.detector.maxDetected} / Hand limit: ${userConfig.hand.maxDetected}` +
     `  ·  Human ${human.version}`;
   ui.framesDraw++;
   ui.lastFrame = human.now();
@@ -712,11 +709,7 @@ function setupMenu() {
   menu.process.addBool('use web worker', ui, 'useWorker');
   menu.process.addHTML('<hr style="border-style: inset; border-color: dimgray">');
   menu.process.addLabel('model parameters');
-  menu.process.addRange('max objects', userConfig.face.detector, 'maxDetected', 1, 50, 1, (val) => {
-    userConfig.face.detector.maxDetected = parseInt(val);
-    userConfig.body.maxDetected = parseInt(val);
-    userConfig.hand.maxDetected = parseInt(val);
-  });
+  menu.process.addHTML(`<p>Face/pose limit: ${userConfig.face.detector.maxDetected} · Hand limit: ${userConfig.hand.maxDetected}<br>Use Subject limit above to restart with a different capacity.</p>`);
   menu.process.addRange('skip frames', userConfig.face.detector, 'skipFrames', 0, 50, 1, (val) => {
     userConfig.face.detector.skipFrames = parseInt(val);
     userConfig.face.emotion.skipFrames = parseInt(val);

@@ -7,8 +7,8 @@
   <meta name="description" content="Explore facial expressions, body pose, and hand gestures in real time. A CWT Lab exhibit powered by Vladimir Mandic's Human library.">
   <title>Human Behavior Explorer | CWT Lab</title>
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css?v=20261027-viewport">
-  <script src="./app.js?v=20261027-viewport" defer></script>
+  <link rel="stylesheet" href="./styles.css?v=20261027-multi1">
+  <script src="./app.js?v=20261027-multi1" defer></script>
 </head>
 <body class="exhibit-page">
   <a class="skip-link" href="#explorer">Skip to the demo</a>
@@ -22,6 +22,12 @@
       <div class="exhibit-bar">
         <div class="session-state"><span class="state-light" id="state-light" aria-hidden="true"></span><span id="session-status" role="status">Ready to explore</span></div>
         <div class="exhibit-actions">
+          <label class="subject-control" for="subjects">Subject limit
+            <select id="subjects" aria-label="Subject limit" title="Changing the limit restarts the current demo">
+              <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+              <option value="4" selected>4</option><option value="5">5</option><option value="6">6</option>
+            </select>
+          </label>
           <button id="stop" type="button" disabled>Stop &amp; reset</button>
           <button id="fullscreen" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M3 16v5h5M21 16v5h-5"/></svg><span>Fullscreen</span></button>
         </div>
@@ -42,10 +48,13 @@
             </svg>
             <span class="art-caption">Illustration · live results begin with your camera</span>
           </div>
-          <div class="welcome-copy"><span class="step-number">YOUR MOVEMENT. LIVE DATA.</span><h2>Step into the frame.</h2><p>Smile, raise your arms, or open your hand. Explore the landmarks and model predictions as you move.</p>
+          <div class="welcome-copy"><span class="step-number">YOUR MOVEMENT. LIVE DATA.</span><h2>Step into the frame.</h2><p>Explore facial expressions, body poses, and hand gestures together. Keep each participant in view.</p>
             <button class="primary" id="launch" type="button"><span class="play-triangle" aria-hidden="true"></span>Launch live demo</button>
-            <button class="sample-button" id="sample" type="button">Try a sample image <span aria-hidden="true">→</span></button>
-            <p class="permission-note">Allow camera access when prompted.<br>No microphone, recording, or upload.</p>
+            <div class="sample-actions">
+              <button class="sample-button" id="sample" type="button">Single sample <span aria-hidden="true">→</span></button>
+              <button class="sample-button" id="group-sample" type="button">Group sample <span aria-hidden="true">→</span></button>
+            </div>
+            <p class="permission-note">Up to 6 people. More people may reduce frame rate.<br>Allow camera access when prompted.<br>No microphone, recording, or upload.</p>
           </div>
         </div>
         <div id="demo-mount" hidden></div>
