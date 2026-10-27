@@ -1,0 +1,32 @@
+<!doctype html>
+<!-- Adapted from Human demo by Vladimir Mandic. MIT license: ../HUMAN-LICENSE.txt -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" id="viewport">
+  <meta name="robots" content="noindex">
+  <title>Human · CWT Lab</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./demo.css">
+  <script src="./index.js" type="module"></script>
+  <script src="./boot.js" defer></script>
+</head>
+<body>
+  <nav id="menubar" class="menubar" aria-label="Human demo controls">
+    <button id="btnDisplay" type="button">Display</button>
+    <button id="btnImage" type="button">Input</button>
+    <button id="btnProcess" type="button">Options</button>
+    <button id="btnModel" type="button">Models</button>
+    <button id="btnStart" type="button"><span id="btnStartText">Start video</span></button>
+  </nav>
+  <div id="media"><canvas id="canvas" class="canvas"></canvas><video id="video" playsinline muted class="video"></video></div>
+  <div id="samples-container" class="samples-container"></div>
+  <div id="loader" class="loader" aria-label="Loading"></div>
+  <div id="status" class="status" role="status">Loading Human…</div>
+  <button id="play" class="play" type="button">Start video</button>
+  <div id="compare-container" class="compare-image"><canvas id="compare-canvas" width="200" height="200"></canvas><div id="similarity"></div></div>
+  <div id="hint" class="hint"></div>
+  <div id="log" class="log"></div>
+  <div id="results" class="results"></div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+window.addEventListener("error",e=>{if("SCRIPT"!==e.target?.tagName)return;const t="Human could not load. Check your internet connection and retry.";document.querySelector("#status").textContent=t,document.querySelector("#loader").style.display="none",parent!==window&&parent.postMessage({type:"cwt-human",state:"error",detail:t},location.origin)},!0);

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#7b2343">
+  <meta name="description" content="Explore facial expressions, body pose, and hand gestures in real time. A CWT Lab exhibit powered by Vladimir Mandic's Human library.">
+  <title>Human Behavior Explorer | CWT Lab</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#explorer">Skip to the demo</a>
+  <header class="site-header">
+    <a class="brand" href="https://www.cwt-lab.com/" aria-label="CWT Lab home"><span class="wordmark">CWT <span>LAB</span></span></a>
+    <span class="brand-description">Construction Workforce<br>&amp; Technology Lab</span>
+    <a class="lab-link" href="https://www.cwt-lab.com/" target="_blank" rel="noopener noreferrer">Visit the lab <span aria-hidden="true">↗</span></a>
+  </header>
+  <main>
+    <div class="intro">
+      <div><p class="eyebrow">CWT LAB <span>/</span> INTERACTIVE EXHIBIT</p><h1>Human Behavior Explorer<span>.</span></h1>
+      <p class="lede">See how computer vision reads facial expressions, body pose, and hand gestures.</p></div>
+      <div class="local-note"><span class="status-dot" aria-hidden="true"></span>Runs in your browser<br><small>Camera video stays on this device</small></div>
+    </div>
+    <section class="exhibit" id="explorer" aria-label="Human behavior demo">
+      <div class="exhibit-bar">
+        <div class="session-state"><span class="state-light" id="state-light" aria-hidden="true"></span><span id="session-status" role="status">Ready to explore</span></div>
+        <div class="exhibit-actions">
+          <button id="stop" type="button" disabled>Stop &amp; reset</button>
+          <button id="fullscreen" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M3 16v5h5M21 16v5h-5"/></svg><span>Fullscreen</span></button>
+        </div>
+      </div>
+      <div class="stage" id="stage">
+        <div class="welcome" id="welcome">
+          <div class="tracking-art" aria-hidden="true">
+            <div class="art-label">MOVEMENT → LANDMARKS</div>
+            <svg viewBox="0 0 360 340" fill="none">
+              <defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#ffffff" opacity=".12"/></pattern></defs>
+              <rect width="360" height="340" fill="url(#grid)"/>
+              <path d="M40 82V42h40M280 42h40v40M40 258v40h40M280 298h40v-40" stroke="#e7b764" stroke-width="2"/>
+              <path d="M164 56l-9 15 4 28 17 17 17-7 12-25-6-24-18-10zM155 78l50 6M159 99l34 10M164 56l12 60 23-56M155 78l38 31M205 84l-46 15" stroke="#e7b764" stroke-width="1.5"/>
+              <path d="M176 116v23m-47 5 47-5 48 11m-95-6-33 49-33-29m161-14 33-41 24-36M129 144l20 88h51l24-82m-75 82-18 69m69-69 27 69M149 232l27-93 24 93" stroke="#f7f0e7" stroke-opacity=".85" stroke-width="2.5"/>
+              <g stroke="#e7b764" stroke-width="1.5"><path d="m281 73-3-17 4-10 5 20 1-32 5-4 1 34 6-28 5-1-4 32 10-24 4 2-10 28-14 12-10-12zM63 164l-17-8-9-10 1-6 16 12-18-23 2-5 23 25-11-27 4-3 14 28-4-25 5-2 6 29-2 18-10-3z"/></g>
+              <g fill="#e7b764"><circle cx="176" cy="139" r="5"/><circle cx="129" cy="144" r="5"/><circle cx="224" cy="150" r="5"/><circle cx="96" cy="193" r="5"/><circle cx="63" cy="164" r="5"/><circle cx="257" cy="109" r="5"/><circle cx="281" cy="73" r="5"/><circle cx="149" cy="232" r="5"/><circle cx="200" cy="232" r="5"/><circle cx="131" cy="301" r="5"/><circle cx="227" cy="301" r="5"/></g>
+              <g fill="#fff"><circle cx="168" cy="78" r="2"/><circle cx="192" cy="81" r="2"/><circle cx="180" cy="90" r="2"/></g>
+            </svg>
+            <span class="art-caption">Illustration · live results begin with your camera</span>
+          </div>
+          <div class="welcome-copy"><span class="step-number">YOUR MOVEMENT. LIVE DATA.</span><h2>Step into the frame.</h2><p>Smile, raise your arms, or open your hand. Explore the landmarks and model predictions as you move.</p>
+            <button class="primary" id="launch" type="button"><span class="play-triangle" aria-hidden="true"></span>Launch live demo</button>
+            <button class="sample-button" id="sample" type="button">Try a sample image <span aria-hidden="true">→</span></button>
+            <p class="permission-note">Allow camera access when prompted.<br>No microphone, recording, or upload.</p>
+          </div>
+        </div>
+        <div id="demo-mount" hidden></div>
+      </div>
+      <div class="exhibit-credit"><span>POWERED BY <a href="https://github.com/vladmandic/human" target="_blank" rel="noopener noreferrer">Human</a> <span class="credit-divider">/</span> Vladimir Mandic</span><a href="https://vladmandic.github.io/human/demo/index.html" target="_blank" rel="noopener noreferrer">Original live demo ↗</a></div>
+    </section>
+    <p id="session-help" class="session-help" role="status" hidden></p>
+    <section class="explore-guide" aria-label="Things to try">
+      <article><span class="guide-number">01</span><div><h2>Face &amp; expression</h2><p>Smile, turn your head, or raise your eyebrows. Watch the face mesh and expression predictions.</p></div></article>
+      <article><span class="guide-number">02</span><div><h2>Body &amp; pose</h2><p>Step back and raise your arms. Keep your whole body in view to explore the pose skeleton.</p></div></article>
+      <article><span class="guide-number">03</span><div><h2>Hands &amp; gestures</h2><p>Bring your hands into view. Open your palm, make a fist, and watch the finger tracking.</p></div></article>
+    </section>
+    <div class="details-row">
+      <details><summary>Exhibit tips &amp; controls</summary><div class="details-content"><p>Use one participant, even lighting, and a clear view of the camera. A recent Chrome or Edge browser is a good starting point on Windows or macOS.</p><p>Inside the demo, <strong>Models</strong> switches features on and off. <strong>Display</strong> changes overlays. <strong>Options</strong> includes performance settings. The first inference can take a little longer while models download.</p><p><strong>Pause video</strong> pauses analysis but keeps the camera connected. Use <strong>Stop &amp; reset</strong> above to release it. If access is denied, allow the camera in your browser’s site settings and relaunch. Internet access is required to load the library and models.</p></div></details>
+      <details><summary>About this demo &amp; attribution</summary><div class="details-content"><p>Presented by the <a href="https://www.cwt-lab.com/">Construction Workforce &amp; Technology Lab</a>. The interface wraps a locally hosted adaptation of <a href="https://github.com/vladmandic/human">Human</a> by Vladimir Mandic, with the original model and display controls.</p><p>Human is used under the <a href="./HUMAN-LICENSE.txt">MIT License</a>. See <a href="./credits.html">credits and source details</a> for the upstream version, model attribution, and CWT adaptations.</p><p>Camera frames are processed in your browser. This exhibit does not record or upload them. Expression categories are model estimates, not measurements of a person’s internal emotional state.</p></div></details>
+    </div>
+  </main>
+  <footer class="site-footer"><span>CWT LAB <span class="footer-slash">/</span> Exploring human–computer interaction</span><a href="./credits.html">Credits &amp; source</a></footer>
+  <noscript><p class="no-script">JavaScript is required to run the live demo. Please enable it and reload.</p></noscript>
+</body>
+</html>
