@@ -25,3 +25,7 @@ From the repository root: `python -m http.server 8765 --bind 127.0.0.1`, then op
 ## Updating
 
 Update the pinned version in `demo/index.js` and `demo/index-worker.js` together. Keep the upstream license and update `credits.html`. Validate a sample inference, all default model downloads, camera start/stop, fullscreen, and narrow-screen layout before exhibition.
+
+## Exhibit layout
+
+The CWT Lab header, one viewport-filling demo panel, and a compact publication-credit footer make up the page. The citation credits Ryan T. Woo and the supplied i3CE 2026 publication. Fullscreen retains the CWT Lab header and citation. Human attribution and the MIT license remain available; the original live-demo link is removed.
