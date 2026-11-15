@@ -15,4 +15,5 @@ This page collects the recruitment and survey materials referenced on this site.
 - [Hardware Survey Flyer](/files/6_Hardware%20Survey%20Flyer.pdf)
 - [Faculty Employer Hidden Curricula Flyer](/files/FacultyEmployer_Hidden-Curricula-Flyer.pdf)
 - [Student Hidden Curricula Flyer](/files/Student_Hidden-Curricula-Flyer.pdf)
+- [Computing Internship Survey Flyer](/files/Computing_Internship_Survey_Flyer_Revised.pdf)
 - [Michael Recruitment QR Page](/michael-qr/)
