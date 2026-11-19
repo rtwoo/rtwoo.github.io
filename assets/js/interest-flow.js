@@ -465,10 +465,10 @@
       .attr("aria-label", function (link) {
         return link.source.title + " to " + link.target.title;
       })
-      .on("mouseenter focus", function (_, link) {
+      .on("focus", function (_, link) {
         setActiveLink(svg, link);
       })
-      .on("mouseleave blur", function () {
+      .on("blur", function () {
         clearActiveNode(svg);
       });
 
@@ -488,10 +488,10 @@
       .attr("tabindex", 0)
       .attr("role", "img")
       .attr("aria-label", nodeLabel)
-      .on("mouseenter focus", function (_, node) {
+      .on("focus", function (_, node) {
         setActiveNode(svg, node.id);
       })
-      .on("mouseleave blur", function () {
+      .on("blur", function () {
         clearActiveNode(svg);
       });
 
