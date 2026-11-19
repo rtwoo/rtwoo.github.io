@@ -105,9 +105,10 @@
     }
 
     var x1 = source.x + source.width / 2;
-    var y1 = source.y;
+    // Mirror the application arms: domain links converge at one point on the core.
+    var y1 = source.y + (target.kind === "core" ? bend : 0);
     var x2 = target.x - target.width / 2;
-    var y2 = target.y + bend;
+    var y2 = target.y + (source.kind === "core" ? bend : 0);
     var dx = Math.max(44, (x2 - x1) * 0.55);
 
     return "M" + x1 + "," + y1 + "C" + (x1 + dx) + "," + y1 + " " + (x2 - dx) + "," + y2 + " " + x2 + "," + y2;
@@ -167,45 +168,6 @@
     return [node.title].concat(detailLines).join(". ");
   }
 
-  function setActiveNode(svg, activeId) {
-    svg.classed("interest-flow--has-active", true);
-    svg.selectAll(".interest-flow__node-group").classed("is-active", function (node) {
-      return node.id === activeId;
-    });
-    svg.selectAll(".interest-flow__node-group").classed("is-muted", function (node) {
-      var connected = node.id === activeId || node.id === "edtech" || activeId === "edtech";
-
-      return !connected;
-    });
-    svg.selectAll(".interest-flow__link-element").classed("is-active", function (link) {
-      return link.source.id === activeId || link.target.id === activeId;
-    });
-    svg.selectAll(".interest-flow__link-element").classed("is-muted", function (link) {
-      return link.source.id !== activeId && link.target.id !== activeId;
-    });
-  }
-
-  function setActiveLink(svg, activeLink) {
-    svg.classed("interest-flow--has-active", true);
-    svg.selectAll(".interest-flow__node-group").classed("is-active", function (node) {
-      return node.id === activeLink.source.id || node.id === activeLink.target.id;
-    });
-    svg.selectAll(".interest-flow__node-group").classed("is-muted", function (node) {
-      return node.id !== activeLink.source.id && node.id !== activeLink.target.id;
-    });
-    svg.selectAll(".interest-flow__link-element").classed("is-active", function (link) {
-      return link.source.id === activeLink.source.id && link.target.id === activeLink.target.id;
-    });
-    svg.selectAll(".interest-flow__link-element").classed("is-muted", function (link) {
-      return link.source.id !== activeLink.source.id || link.target.id !== activeLink.target.id;
-    });
-  }
-
-  function clearActiveNode(svg) {
-    svg.classed("interest-flow--has-active", false);
-    svg.selectAll(".interest-flow__node-group, .interest-flow__link-element").classed("is-active", false).classed("is-muted", false);
-  }
-
   function layout(width) {
     var compact = width < 640;
     var height = compact ? 750 : 350;
@@ -253,7 +215,7 @@
         return Object.assign({}, node, {
           kind: "source",
           x: width * 0.17,
-          y: 92 + index * 86,
+          y: 92 + index * 98,
           width: 188,
           height: 62,
         });
@@ -377,7 +339,7 @@
         target: frame.core,
         bend: frame.compact ? -48 + index * 48 : -20 + index * 20,
         color: source.color,
-        width: frame.compact ? 9 : 12,
+        width: frame.compact ? 9 : 10,
         vertical: frame.compact,
       };
     });
@@ -413,6 +375,10 @@
       .enter()
       .append("path")
       .attr("class", "interest-flow__link interest-flow__link-element")
+      .attr("role", "img")
+      .attr("aria-label", function (link) {
+        return link.source.title + " to " + link.target.title;
+      })
       .attr("d", function (link) {
         return nodePath(link.source, link.target, link.bend, link.vertical);
       })
@@ -423,54 +389,6 @@
         return link.width;
       })
       .attr("opacity", 0.35);
-
-    linkGroup
-      .selectAll(".interest-flow__pulse")
-      .data(links)
-      .enter()
-      .append("path")
-      .attr("class", "interest-flow__pulse interest-flow__link-element")
-      .attr("d", function (link) {
-        return nodePath(link.source, link.target, link.bend, link.vertical);
-      })
-      .attr("stroke", function (link) {
-        return link.color;
-      })
-      .attr("stroke-width", 2)
-      .attr("stroke-dasharray", "1 18")
-      .attr("stroke-dashoffset", function (_, index) {
-        return index * -4;
-      })
-      .append("animate")
-      .attr("attributeName", "stroke-dashoffset")
-      .attr("from", "0")
-      .attr("to", "-38")
-      .attr("dur", "4.8s")
-      .attr("repeatCount", "indefinite");
-
-    linkGroup
-      .selectAll(".interest-flow__hit-link")
-      .data(links)
-      .enter()
-      .append("path")
-      .attr("class", "interest-flow__hit-link")
-      .attr("d", function (link) {
-        return nodePath(link.source, link.target, link.bend, link.vertical);
-      })
-      .attr("stroke-width", function (link) {
-        return link.width + 18;
-      })
-      .attr("tabindex", 0)
-      .attr("role", "img")
-      .attr("aria-label", function (link) {
-        return link.source.title + " to " + link.target.title;
-      })
-      .on("focus", function (_, link) {
-        setActiveLink(svg, link);
-      })
-      .on("blur", function () {
-        clearActiveNode(svg);
-      });
 
     var nodes = frame.sources.concat([frame.core], frame.outcomes);
     var nodeGroups = svg
@@ -485,15 +403,8 @@
       .attr("class", function (node) {
         return "interest-flow__node-group interest-flow__node-group--" + node.kind;
       })
-      .attr("tabindex", 0)
       .attr("role", "img")
-      .attr("aria-label", nodeLabel)
-      .on("focus", function (_, node) {
-        setActiveNode(svg, node.id);
-      })
-      .on("blur", function () {
-        clearActiveNode(svg);
-      });
+      .attr("aria-label", nodeLabel);
 
     nodeGroups.each(function (node) {
       renderNode(d3.select(this), node);

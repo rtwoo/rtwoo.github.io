@@ -1054,18 +1054,6 @@ ul.task-list input[type="checkbox"] {
   text-anchor: middle;
 }
 
-.interest-flow__node-group {
-  cursor: pointer;
-  outline: none;
-}
-
-.interest-flow__node-group,
-.interest-flow__link-element {
-  transition:
-    filter 180ms ease,
-    opacity 180ms ease;
-}
-
 .interest-flow__rail {
   fill: none;
   stroke: color-mix(in srgb, var(--global-divider-color) 74%, transparent);
@@ -1082,23 +1070,6 @@ ul.task-list input[type="checkbox"] {
   transition:
     opacity 180ms ease,
     stroke-width 180ms ease;
-}
-
-.interest-flow__pulse {
-  fill: none;
-  stroke: var(--global-theme-color);
-  stroke-linecap: round;
-  opacity: 0.16;
-  transition:
-    opacity 180ms ease,
-    stroke-width 180ms ease;
-}
-
-.interest-flow__hit-link {
-  fill: none;
-  stroke: transparent;
-  pointer-events: stroke;
-  cursor: pointer;
 }
 
 .interest-flow__node {
@@ -1160,55 +1131,6 @@ ul.task-list input[type="checkbox"] {
 .interest-flow__sub-label--core {
   fill: color-mix(in srgb, var(--global-text-color) 68%, var(--global-text-color-light));
   font-size: 11.2px;
-}
-
-.interest-flow--has-active .interest-flow__node-group.is-muted,
-.interest-flow--has-active .interest-flow__link-element.is-muted {
-  opacity: 0.22;
-}
-
-.interest-flow__node-group.is-active {
-  filter: drop-shadow(4px 4px 0 color-mix(in srgb, var(--interest-node-color) 22%, transparent));
-}
-
-.interest-flow__node-group.is-active .interest-flow__node,
-.interest-flow__node-group:focus-visible .interest-flow__node {
-  fill: color-mix(in srgb, var(--global-bg-color) 86%, var(--interest-node-color));
-  stroke: var(--interest-node-color);
-  stroke-width: 2;
-}
-
-.interest-flow__node-group.is-active .interest-flow__node-rule,
-.interest-flow__node-group:focus-visible .interest-flow__node-rule {
-  opacity: 1;
-}
-
-.interest-flow__node-group.is-active .interest-flow__label,
-.interest-flow__node-group:focus-visible .interest-flow__label {
-  fill: var(--interest-node-color);
-}
-
-.interest-flow__node-group.is-active .interest-flow__label--core,
-.interest-flow__node-group:focus-visible .interest-flow__label--core {
-  fill: var(--global-theme-color);
-}
-
-.interest-flow__node-group.is-active .interest-flow__sub-label,
-.interest-flow__node-group:focus-visible .interest-flow__sub-label {
-  fill: color-mix(in srgb, var(--global-text-color) 82%, var(--interest-node-color));
-}
-
-.interest-flow__rail.is-active {
-  opacity: 0.72 !important;
-  stroke: color-mix(in srgb, var(--global-divider-color) 42%, var(--global-text-color));
-}
-
-.interest-flow__link.is-active {
-  opacity: 0.68 !important;
-}
-
-.interest-flow__pulse.is-active {
-  opacity: 0.48;
 }
 
 @media (max-width: 576px) {
